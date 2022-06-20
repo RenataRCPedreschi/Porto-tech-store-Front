@@ -5,5 +5,6 @@ export class ProdutoModel{
   public precoCustoProduto!: number
   public qtdeEstoqueProduto!: number
   public urlFotoProduto!: string
+  public categoriaProduto!: string
 
 }

@@ -10,6 +10,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
     EntrarComponent,
     CadastrarComponent,
     InicioComponent,
-    CabecalhoComponent
+    CabecalhoComponent,
+    CadastroProdutoComponent
   ],
   imports: [
     BrowserModule,

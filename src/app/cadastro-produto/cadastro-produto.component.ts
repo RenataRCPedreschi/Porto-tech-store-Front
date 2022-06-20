@@ -1,0 +1,23 @@
+import { produtoService } from './../services/produto.service';
+import { ProdutoModel } from './../model/ProdutoModel';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-cadastro-produto',
+  templateUrl: './cadastro-produto.component.html',
+  styleUrls: ['./cadastro-produto.component.css']
+})
+export class CadastroProdutoComponent implements OnInit {
+
+  produto: ProdutoModel = new ProdutoModel();
+
+  constructor(private produtoService: produtoService) { }
+
+  ngOnInit(): void {
+  }
+  addProdutosBancoDados() {
+    this.produtoService.criarNovoProduto(this.produto).subscribe(resp=>{
+      console.log("resposta"+resp);
+    });
+  }
+}

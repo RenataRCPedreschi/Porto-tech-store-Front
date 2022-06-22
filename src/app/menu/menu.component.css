@@ -6,7 +6,7 @@ nav{
     
 }
 .botaoHover:hover{
-    background-color: rgb(10,161,221);
+    background-color: #0aa1dd;
     color: #ffffff !important;
     transition: 0.3s ease-in-out;
     

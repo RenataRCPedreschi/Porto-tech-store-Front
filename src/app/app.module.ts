@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
     CadastrarComponent,
     InicioComponent,
     CabecalhoComponent,
-    CadastroProdutoComponent
+    CadastroProdutoComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,

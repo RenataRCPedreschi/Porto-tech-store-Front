@@ -14,7 +14,47 @@
   .container{
     padding: 0.5rem;
   }
-  .btn btn-primary{
+  .btn{
     align-items: center;
     justify-content: center;
+    color: #ffffff ;
+    background-color: #103574;
+    border-bottom: #103574;
+    
+   
+  }
+
+
+  .imgCard{
+    padding: 5px;
+  }
+
+  .preco{
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #0AA1DD;
+    text-align: center;
+    
+    
+
+
+  }
+
+  .textDescription{
+
+    text-align: left;
+  }
+
+  .precoPromocao{
+
+    color: red;
+    margin-bottom: 16px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .promocao{
+    text-align: center;
+    color: rgb(235, 31, 31);
+    margin: 10px;
   }

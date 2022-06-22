@@ -1,0 +1,28 @@
+
+
+
+.pagamentos img{
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+}
+
+.debt{
+    display: flex;
+    flex-direction: column;
+    /* gap: 25px;
+    align-items: center; */
+    margin-top: 25px;
+    
+}
+
+.debt img{
+    height: 60%;
+    width: 60%;
+    margin-left: auto;
+}
+.textoFooter1{
+font-weight: bold;
+font-style: normal;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

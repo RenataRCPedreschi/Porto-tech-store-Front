@@ -6,13 +6,13 @@
     <form class="d-flex flex-column align-items-center">
      <div class="mb-3 form-group w-50">
         <label class="form-label mt-5">Usuário</label>
-        <input placeholder="Digite seu usuário" type="text" class="form-control" name = "usuario"/>
+        <input placeholder="Digite seu usuário" type="text" class="form-control" name = "usuario" [(ngModel)]="userLogin.username"/>
       </div>
       <div class="mb-3 form-group w-50">
         <label class="form-label mt-2">Senha</label>
-        <input placeholder="Digite sua senha" type="password" class="form-control" name ="senha"/>
+        <input placeholder="Digite sua senha" type="password" class="form-control" name ="senha" [(ngModel)] = "userLogin.password"/>
       </div>
-      <button type="submit" class="btn btn-dark mt-3 fs-5">Entrar</button>
+      <button type="submit" class="btn btn-dark mt-3 fs-5" (click) = "entrar()">Entrar</button>
     </form>
     <p class="text-center mt-3 fs-5">
         Não tem uma conta? <a routerLink='/cadastrar'>Cadastre-se</a>

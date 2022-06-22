@@ -1,3 +1,5 @@
+import { AuthService } from './../services/auth.service';
+import { UserModel } from './../model/UserModel';
 import { ViaCEPService } from './../services/viacep.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,13 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
-  cep:string = '';
-  endereco:string = '';
-  bairro:string = '';
-  cidade:string = '';
-  estado:string = '';
+  newUser : UserModel = new UserModel();
 
-  constructor(private viacepService : ViaCEPService) { }
+  constructor(private viacepService : ViaCEPService , private auth: AuthService) { }
 
   ngOnInit(): void {
 
@@ -25,9 +23,17 @@ export class CadastrarComponent implements OnInit {
   }
 
   prencherEndereco(enderecoModel: any){
-    this.endereco = enderecoModel.logradouro;
-    this.bairro = enderecoModel.bairro;
-    this.cidade = enderecoModel.localidade;
-    this.estado = enderecoModel.uf;
+    this.newUser.endereco = enderecoModel.logradouro;
+    this.newUser.bairro = enderecoModel.bairro;
+    this.newUser.cidade = enderecoModel.localidade;
+    this.newUser.estado = enderecoModel.uf;
+  }
+
+  cadastrarPessoa(){
+    this.newUser.isAdmin=false;
+    console.log(this.newUser);
+    this.auth.cadastrar(this.newUser).subscribe(resp=>{
+      console.log(resp);
+    })
   }
 }

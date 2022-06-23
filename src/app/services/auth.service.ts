@@ -28,6 +28,8 @@ export class AuthService{
 
 
   logado(): boolean{
+    console.log(environment.token!='');
+    console.log("service is logado"+environment.token);
     return environment.token!='';
   }
 }

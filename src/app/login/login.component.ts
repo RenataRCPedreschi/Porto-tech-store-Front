@@ -1,16 +1,15 @@
-
-import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { UserLogin } from '../model/UserLogin';
 import { Router } from '@angular/router';
 import { environment } from '../environments/environment';
+import { UserLogin } from '../model/UserLogin';
+import { AuthService } from '../services/auth.service';
 
 @Component({
-  selector: 'app-entrar',
-  templateUrl: './entrar.component.html',
-  styleUrls: ['./entrar.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class EntrarComponent implements OnInit {
+export class LoginComponent implements OnInit {
   userLogin: UserLogin = new UserLogin();
   constructor(private auth: AuthService, private router: Router) {
 

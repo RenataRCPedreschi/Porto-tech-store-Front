@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     InicioComponent,
     CabecalhoComponent,
     CadastroProdutoComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,

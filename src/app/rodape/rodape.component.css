@@ -1,0 +1,88 @@
+#myFooter {
+    background-color: #e6e6e6;
+    
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.row {
+    margin-bottom: 60px;
+}
+
+.info{
+    text-align: justify; 
+    color:black;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+h5 {
+    font-size: 18px;
+    color:black;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.logo{
+    margin-top: 10px;
+}
+
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#myFooter a:hover {
+    color:black;
+}
+
+.second-bar {
+    text-align: center;
+    background-color: #005eff;
+    
+}
+
+.second-bar a {
+    font-size: 22px;
+    color:#9fa3a9;
+    padding: 10px;
+    transition: 0.2s;
+    line-height: 68px;
+}
+
+.second-bar a:hover {
+    text-decoration: none;
+}
+
+.social-icons {
+    
+    display: block;
+}
+
+
+
+.imgLogoRodape{
+
+width: 120px;
+height: 40px;
+
+
+}
+
+.imgSegura{
+    width: 30px;
+    height: 30px;
+}

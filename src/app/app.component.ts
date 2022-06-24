@@ -1,3 +1,4 @@
+import { environment } from './environments/environment';
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
 
@@ -8,7 +9,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'PortoTechStore';
+  environmentComponent = environment;
   constructor(public auth: AuthService){
-
   }
 }

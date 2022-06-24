@@ -1,4 +1,4 @@
-import { produtoService } from './../services/produto.service';
+import { ProdutoService } from './../services/produto.service';
 import { ProdutoModel } from './../model/ProdutoModel';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,7 +11,7 @@ export class CadastroProdutoComponent implements OnInit {
 
   produto: ProdutoModel = new ProdutoModel();
 
-  constructor(private produtoService: produtoService) { }
+  constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
   }

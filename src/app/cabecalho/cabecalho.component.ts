@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { environment } from './../environments/environment';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { carrinho } from '../environments/carrinho';
 
 @Component({
   selector: 'app-cabecalho',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabecalhoComponent implements OnInit {
 
+  tamanhoCarrinho = carrinho.length;
   constructor() { }
-
   ngOnInit(): void {
+    console.log(carrinho.length)
+    console.log(carrinho)
   }
 
+  isNotLogado(): boolean{
+
+    return environment.token == '';
+  }
+
+  esconderHeaderRodape(){
+    environment.exibirMenuRodape=false;
+  }
 }

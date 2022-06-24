@@ -24,7 +24,14 @@ export class LoginComponent implements OnInit {
         environment.id = this.userLogin.id;
         environment.username = this.userLogin.username;
         environment.token = this.userLogin.token;
-        this.router.navigate(['/inicio']);
+        environment.exibirMenuRodape = true;
+        environment.isAdmin = this.userLogin.isAdmin;
+        if(this.userLogin.isAdmin == true){
+          this.router.navigate(['/gerenciadorprodutos']);
+        }else{
+
+          this.router.navigate(['/inicio']);
+        }
         console.log(environment);
     });
   }

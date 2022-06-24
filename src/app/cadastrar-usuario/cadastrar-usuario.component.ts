@@ -1,14 +1,15 @@
-import { AuthService } from './../services/auth.service';
-import { UserModel } from './../model/UserModel';
-import { ViaCEPService } from './../services/viacep.service';
+import { AuthService } from '../services/auth.service';
+import { UserModel } from '../model/UserModel';
+import { ViaCEPService } from '../services/viacep.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cadastrar',
-  templateUrl: './cadastrar.component.html',
-  styleUrls: ['./cadastrar.component.css']
+  selector: 'app-cadastrar-usuario',
+  templateUrl: './cadastrar-usuario.component.html',
+  styleUrls: ['./cadastrar-usuario.component.css']
 })
-export class CadastrarComponent implements OnInit {
+export class CadastrarUsuarioComponent implements OnInit {
+
   newUser : UserModel = new UserModel();
 
   constructor(private viacepService : ViaCEPService , private auth: AuthService) { }
@@ -36,4 +37,6 @@ export class CadastrarComponent implements OnInit {
       console.log(resp);
     })
   }
+
+
 }

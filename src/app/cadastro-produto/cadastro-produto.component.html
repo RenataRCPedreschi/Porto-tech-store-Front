@@ -13,8 +13,8 @@
     </div>
 
     <div class="mb-3 form-group w-50">
-      <label class="form-label" for="precoCusto">Preço de Custo</label>
-      <input type="number" class="form-control" name="precoCusto" [(ngModel)] = "produto.precoCustoProduto"/>
+      <label class="form-label" for="descricaoProduto">Descrição Produto</label>
+      <input type="text" class="form-control" name="descricaoProduto" [(ngModel)] = "produto.descricaoProduto"/>
     </div>
 
     <div class="mb-3 form-group w-50">
@@ -28,6 +28,10 @@
     <div class="mb-3 form-group w-50">
       <label class="form-label" for="urlFoto">Categoria Produto</label>
       <input type="text" class="form-control" name="categoriaProduto" [(ngModel)] = "produto.categoriaProduto"/>
+    </div>
+    <div class="mb-3 form-group w-50">
+      <label class="form-label" for="marcaProduto">Marca Produto</label>
+      <input type="text" class="form-control" name="marcaProduto" [(ngModel)] = "produto.marcaProduto"/>
     </div>
     <button type="submit" class="btn btn-dark">Cadastrar</button>
   </form>

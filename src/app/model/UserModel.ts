@@ -4,9 +4,7 @@ export class UserModel{
   username!: string
   password!: string
   cpf!: string
-  email!: string
   celular!: string
-  dataNascimento!: Date
   endereco!: string
   numero!: string
   complemento!: string

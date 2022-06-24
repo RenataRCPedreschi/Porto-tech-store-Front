@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -13,19 +12,22 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { LoginComponent } from './login/login.component';
+import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produtos.component';
+import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     RodapeComponent,
-    CadastrarComponent,
+    CadastrarUsuarioComponent,
     InicioComponent,
     CabecalhoComponent,
     CadastroProdutoComponent,
     CarrinhoComponent,
     ProdutoComponent,
-    LoginComponent
+    LoginComponent,
+    GerenciarProdutosComponent
   ],
   imports: [
     BrowserModule,

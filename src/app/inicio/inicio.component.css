@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-  
+
 
 
 }
@@ -20,8 +20,8 @@
     color: #ffffff ;
     background-color: #103574;
     border-bottom: #103574;
-    
-   
+
+
   }
 
 
@@ -34,8 +34,8 @@
     font-size: 20px;
     color: #0AA1DD;
     text-align: center;
-    
-    
+
+
 
 
   }
@@ -57,4 +57,9 @@
     text-align: center;
     color: rgb(235, 31, 31);
     margin: 10px;
+  }
+
+  #carouselExampleIndicators{
+    height: 500px;
+    max-height: 500px;
   }

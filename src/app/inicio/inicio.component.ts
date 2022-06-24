@@ -1,7 +1,10 @@
+import { environment } from './../environments/environment';
+import { ProdutoService } from './../services/produto.service';
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from '../environments/environment';
+import { ProdutoModel } from '../model/ProdutoModel';
+import { carrinho } from '../environments/carrinho';
 
 @Component({
   selector: 'app-inicio',
@@ -10,17 +13,20 @@ import { environment } from '../environments/environment';
 })
 export class InicioComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  public listaProdutos:ProdutoModel[] = [];
+  constructor(private router: Router,private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
 
+    this.produtoService.buscarProdutos().subscribe((lista:ProdutoModel[])=>{
+      this.listaProdutos = lista;
+      console.log(this.listaProdutos);
+    });
 
-      if(environment.token == '')
-    {
-
-      this.router.navigate(['/entrar'])
-    }
 
   }
-
+  adicionarCarrinho(produto : ProdutoModel){
+    carrinho.push(produto);
+    console.log(carrinho);
+  }
 }

@@ -1,0 +1,24 @@
+<div class="container">
+<h3 class = "display-5 text-center">Bem vindo admin. - Gerencie seus produtos</h3>
+
+<table class = "table">
+  <thead>
+    <th scope="col">#Cód.</th>
+    <th scope="col">Foto</th>
+    <th scope="col">Nome</th>
+    <th scope="col">Preço</th>
+  </thead>
+  <tbody *ngIf = "listaProdutos.length>0">
+    <tr *ngFor = "let produto of listaProdutos">
+      <th scope="row">{{produto.idProduto}}</th>
+      <td><img src="{{produto.urlFotoProduto}}" alt="Foto produto" height="128" width="128"></td>
+      <td>{{produto.nomeProduto}}</td>
+      <td>R${{produto.precoVendaProduto}}</td>
+      <td><button class ="btn btn-dark">Editar</button></td>
+      <td><button class ="btn btn-dark">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>
+<button class ="btn btn-dark mt-1" (click) = "chamarPagProduto()">Novo Produto</button>
+
+</div>

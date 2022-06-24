@@ -14,20 +14,36 @@
 
     <nav>
       <ul>
-        <li class="userImg">
-          <a routerLink="login">
+        <li class="userImg" *ngIf="isNotLogado(); else logado">
+          <a routerLink="login" (click) = "esconderHeaderRodape()">
             <img src="../../assets/img/userlogin.png" alt="login">
             Entre/Cadastre-se
           </a>
         </li>
+        <ng-template #logado>
+          <li class="userImg">
+            <a routerLink="login" (click) = "esconderHeaderRodape()">
+              <img src="../../assets/img/userlogin.png" alt="login">
+              bem vindo logado
+            </a>
+          </li>
+          <li>
+            <a>
+              Sair
+            </a>
+          </li>
+        </ng-template>
+
         <li class="carrinhoImg">
           <a routerLink="carrinho">
             <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
             Meu carrinho
+            <span>{{tamanhoCarrinho}}</span>
           </a>
         </li>
       </ul>
     </nav>
+
 
   </div>
 

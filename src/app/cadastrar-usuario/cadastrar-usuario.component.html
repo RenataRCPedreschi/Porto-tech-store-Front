@@ -3,10 +3,12 @@
     " alt="...">
     <form class="d-flex flex-column align-items-center">
     <h1 class="display-9 text-center border-personalizada">Faça seu Cadastro</h1>
+
     <div class="mb-3 form-group w-50">
-      <label class="form-label" for="username">Usuário(Login)</label>
-      <input type="text" class="form-control" name="username" [(ngModel)]="newUser.username"/>
+      <label class="form-label">E-mail(login)</label>
+      <input type="email" class="form-control" name="email"[(ngModel)]="newUser.username" />
     </div>
+
     <div class="mb-3 form-group w-50">
       <label class="form-label" for="password">Sua senha</label>
       <input type="text" class="form-control" name="password" [(ngModel)]="newUser.password"/>
@@ -19,20 +21,11 @@
       <label class="form-label">CPF</label>
       <input type="text" class="form-control" name="CPF" [(ngModel)]="newUser.cpf" />
     </div>
-    <div class="mb-3 form-group w-50">
-      <label class="form-label">E-mail</label>
-      <input type="email" class="form-control" name="email"[(ngModel)]="newUser.email" />
-    </div>
+
     <div class="mb-3 form-group w-50">
       <label class="form-label">Celular</label>
       <input type="text" class="form-control" name="celular" [(ngModel)] = "newUser.celular"/>
     </div>
-    <div class="mb-3 form-group w-50">
-      <label class="form-label">Data de nascimento</label>
-      <input type="text" class="form-control" name="dataDenascimento" [(ngModel)] = "newUser.dataNascimento"/>
-    </div>
-
-
     <div class="mb-3 form-group w-50">
       <label class="form-label">CEP</label>
       <input type="text" class="form-control" name="cep" #cep (blur)="buscarEndereco(cep)" [(ngModel)]="newUser.cep" />

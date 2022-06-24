@@ -12,7 +12,7 @@ export class GerenciarProdutosComponent implements OnInit {
   public listaProdutos: ProdutoModel[] = []
   constructor(private router: Router, private produtoService: ProdutoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     this.produtoService.buscarProdutos().subscribe((lista: ProdutoModel[]) => {
       this.listaProdutos = lista;
@@ -25,3 +25,5 @@ export class GerenciarProdutosComponent implements OnInit {
 
 
 }
+
+

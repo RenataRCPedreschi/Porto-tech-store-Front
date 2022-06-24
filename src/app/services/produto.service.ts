@@ -24,4 +24,13 @@ export class ProdutoService{
     console.log(this.httpClient.post<ProdutoModel>(this.url,produto));
     return this.httpClient.post<ProdutoModel>(this.url,produto);
   }
+  putProduto(produto:ProdutoModel):Observable<ProdutoModel>{
+    return this.httpClient.put<ProdutoModel>(this.url, produto)
+
+  }
+  deleteProduto(id: number){
+    return this.httpClient.delete<ProdutoModel>(this.url + "/" +id)
+}
+
+
 }

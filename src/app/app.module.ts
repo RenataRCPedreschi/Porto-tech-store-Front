@@ -14,6 +14,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { LoginComponent } from './login/login.component';
 import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produtos.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario
     CarrinhoComponent,
     ProdutoComponent,
     LoginComponent,
-    GerenciarProdutosComponent
+    GerenciarProdutosComponent,
+    EditarProdutoComponent
   ],
   imports: [
     BrowserModule,

@@ -12,12 +12,12 @@
     justify-content: space-between;
 }
 .row {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 
 .info{
     text-align: justify; 
-    color:black;
+    color:#000000df;
 }
 
 ul {
@@ -28,7 +28,7 @@ ul {
 
 h5 {
     font-size: 18px;
-    color:black;
+    color:rgb(0, 0, 0);
     font-weight: bold;
     margin-top: 30px;
 
@@ -41,7 +41,7 @@ h5 {
 
 
 a {
-    color: black;
+    color: rgba(0, 0, 0, 0.616);
     text-decoration: none;
 }
 
@@ -70,7 +70,18 @@ a {
 .social-icons {
     
     display: block;
+
 }
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+   
+
+
+
+}
+
 
 
 
@@ -78,11 +89,9 @@ a {
 
 width: 120px;
 height: 40px;
+margin: 0px;
+
 
 
 }
 
-.imgSegura{
-    width: 30px;
-    height: 30px;
-}

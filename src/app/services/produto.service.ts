@@ -24,6 +24,10 @@ export class ProdutoService{
     console.log(this.httpClient.post<ProdutoModel>(this.url,produto));
     return this.httpClient.post<ProdutoModel>(this.url,produto);
   }
+
+  buscarProdutoById(id:number):Observable<ProdutoModel>{
+    return this.httpClient.get<ProdutoModel>(this.url+'/'+id);
+  }
   putProduto(produto:ProdutoModel):Observable<ProdutoModel>{
     return this.httpClient.put<ProdutoModel>(this.url, produto)
 

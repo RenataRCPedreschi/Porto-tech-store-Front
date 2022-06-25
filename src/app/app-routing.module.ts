@@ -1,3 +1,4 @@
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produtos.component';
 import { LoginComponent } from './login/login.component';
@@ -15,7 +16,8 @@ const routes: Routes = [{
 {path: 'carrinho',component: CarrinhoComponent},
 {path: 'login',component: LoginComponent},
 {path:'cadastroproduto',component:CadastroProdutoComponent},
-{path:'gerenciadorprodutos', component:GerenciarProdutosComponent}
+{path:'gerenciadorprodutos', component:GerenciarProdutosComponent},
+{path:'produto-editar/:id',component:EditarProdutoComponent}
 ];
 
 @NgModule({

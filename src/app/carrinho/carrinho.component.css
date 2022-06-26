@@ -1,7 +1,23 @@
 .grid-container{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .div{
   border: 1px solid black;
+}
+.qtdeInput{
+  width: 15%;
+}
+
+icon-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon-sm {
+  width: 2rem;
+  height: 2rem;
 }

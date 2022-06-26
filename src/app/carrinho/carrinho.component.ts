@@ -14,9 +14,14 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
     this.calcularTotal();
   }
-  calcularTotal(){
-    for(let produto of this.carrinhoLocal){
-      this.total+= produto.precoVendaProduto;
-    }
+
+  calcularTotal() {
+  }
+
+  aumentarQtde() {
+  }
+
+  diminuirQtde() {
+
   }
 }

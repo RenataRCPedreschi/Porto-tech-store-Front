@@ -4,21 +4,42 @@
 
     <div class="col-md-8">
       <div class="card">
-        <h5 class="card-header">Carrinho</h5>
+        <div class="d-flex justify-content-between card-header">
+          <h5>Carrinho</h5>
+          <h5>Preço</h5>
+        </div>
 
         <div class="d-flex flex-column" *ngIf="carrinhoLocal.length>0">
 
+
           <div class="grid-container" *ngFor="let produto of carrinhoLocal">
+
             <div class="foto div">
               <img src={{produto.urlFotoProduto}} alt="" height="256" width="256">
             </div>
+
+
             <div class="info div">
-              <h3>{{produto.nomeProduto}}</h3>
-              <h3>R${{produto.precoVendaProduto}}</h3>
-              <h3>{{produto.marcaProduto}}</h3>
-              <h3>Qtde</h3>
+              <p>{{produto.nomeProduto}}</p>
+              <p>{{produto.marcaProduto}}</p>
+              <p>{{produto.categoriaProduto}}</p>
+              <div>
+                <span>Qtde.</span>
+                <div class="d-flex justify-content-between align-items-center"></div>
+                <button class="border rounded-circle icon-sm mx-1" >-</button>
+                <input type="text" class="border-0 text-center qtdeInput" value="1" min="1"
+                  onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" readonly>
+                  <button class="border rounded-circle icon-sm mx-1">+</button>
+              </div>
+
+              <button>remover</button>
+            </div>
+
+            <div class="preco">
+              <p class="text-end">{{produto.precoVendaProduto}}</p>
             </div>
           </div>
+
 
         </div>
 

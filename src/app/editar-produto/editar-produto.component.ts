@@ -19,16 +19,17 @@ export class EditarProdutoComponent implements OnInit {
     this.idProduto = Number(this.acRoute.snapshot.params['id']);
 
     this.produtoService.buscarProdutoById(this.idProduto).subscribe((resp: ProdutoModel) => {
-      console.log("ANTES");
-      console.log(this.produto);
       this.produto = resp;
-      console.log("DEPOIS");
-      console.log(this.produto);
     }
     );
   }
 
-  atualizarProduto(){
+  atualizarProduto(produto: ProdutoModel) {
+    this.produtoService.putProduto(produto).subscribe(resp => {
+
+    });
+
 
   }
+
 }

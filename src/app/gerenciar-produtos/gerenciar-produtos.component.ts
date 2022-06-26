@@ -9,20 +9,27 @@ import { ProdutoModel } from '../model/ProdutoModel';
   styleUrls: ['./gerenciar-produtos.component.css']
 })
 export class GerenciarProdutosComponent implements OnInit {
+
   public listaProdutos: ProdutoModel[] = []
-  constructor(private router: Router, private produtoService: ProdutoService) { }
+  constructor(private router: Router, private produtoService: ProdutoService) {
 
+  }
   ngOnInit() {
-
     this.produtoService.buscarProdutos().subscribe((lista: ProdutoModel[]) => {
       this.listaProdutos = lista;
-      console.log(this.listaProdutos);
     });
   }
   chamarPagProduto() {
     this.router.navigate(['/cadastroproduto']);
   }
 
+  deletarProduto(id:number|string){
+
+    this.produtoService.deleteProduto(Number(id)).subscribe(resp=>{
+
+      this.ngOnInit();
+    });
+  }
 
 }
 

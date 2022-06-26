@@ -1,11 +1,14 @@
-#myFooter {
+footer {
     background-color: #e6e6e6;  
-    margin-top: 15px;
+        margin-top: 15px;
     display: flex;
     flex-direction: column; 
-    /* position: absolute;
-    bottom: 0px; */
-    width: 100vw;   
+    /* position: absolute; */
+    bottom: 0px;
+    width: 100%;  
+    text-align: center;
+  
+   
      
 }
 .container{
@@ -16,7 +19,7 @@
 }
 
 .info{
-    /* text-align: justify; */ 
+    /* text-align: justify;  */
     color:#000000df;
 }
 

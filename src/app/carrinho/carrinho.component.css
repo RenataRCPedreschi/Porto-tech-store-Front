@@ -30,3 +30,9 @@ icon-shape {
   background-color: #103574;
   border-bottom: #103574;
 }
+
+
+
+.tm-max {
+  max-height: 150px;
+}

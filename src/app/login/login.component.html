@@ -1,6 +1,7 @@
 <section class="container text">
-  <img src="../../assets/img/logo-sem-fundo.png" class="rounded mx-auto d-block w-25
-  "  alt="...">
+  <div class="logo">
+  <img src="../../assets/img/Logo PortoTech.png" class="rounded mx-auto d-block w-25"  alt="logo">
+</div>
   <h1 class="display-7 text-center border-personalizada">Bem-vindo</h1>
   <h2 class="text-center fs-5">PortoTech Store: A mais nova loja de produtos tecnológicos</h2>
   <form class="d-flex flex-column align-items-center">
@@ -12,7 +13,7 @@
       <label class="form-label mt-2">Senha</label>
       <input placeholder="Digite sua senha" type="password" class="form-control" name ="senha" [(ngModel)] = "userLogin.password"/>
     </div>
-    <button type="submit" class="btn btn-dark mt-3 fs-5" (click) = "entrar()">Entrar</button>
+    <button type="submit" class="btn btn mt-3 fs-5" (click) = "entrar()">Entrar</button>
   </form>
   <p class="text-center mt-3 fs-5">
       Não tem uma conta? <a routerLink='/cadastrarusuario'>Cadastre-se</a>

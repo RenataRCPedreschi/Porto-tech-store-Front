@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produtos.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { EditarProdutoComponent } from './editar-produto/editar-produto.componen
     ProdutoComponent,
     LoginComponent,
     GerenciarProdutosComponent,
-    EditarProdutoComponent
+    EditarProdutoComponent,
+    SobreComponent,
+    FaleConoscoComponent
   ],
   imports: [
     BrowserModule,

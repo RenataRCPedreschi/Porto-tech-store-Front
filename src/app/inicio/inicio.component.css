@@ -1,3 +1,4 @@
+
 .carousel-inner{
     width: 100%;
     height: 100%;
@@ -5,23 +6,22 @@
     margin: 25px;
 }
 .carousel-inner> .item> img {
-    width:  640px;
-    height: 360px;
+    width:  100%;
+    height: 100%;
+    max-width: 420px;
   }
 
   .container{
     padding: 0.5rem;
   }
+
   .btn{
     align-items: center;
     justify-content: center;
     color: #ffffff ;
     background-color: #103574;
     border-bottom: #103574;
-
-
   }
-
 
   .imgCard{
     padding: 5px;
@@ -32,19 +32,13 @@
     font-size: 20px;
     color: #0AA1DD;
     text-align: center;
-
-
-
-
   }
 
   .textDescription{
-
     text-align: left;
   }
 
   .precoPromocao{
-
     color: red;
     margin-bottom: 16px;
     font-size: 20px;
@@ -59,7 +53,7 @@
 
   #carouselExampleIndicators{
     height: 500px;
-    max-height: 500px;
+    max-height: 100%;
   }
 
   

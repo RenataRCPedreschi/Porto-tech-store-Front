@@ -5,3 +5,11 @@
 .div{
   border: 1px solid black;
 }
+
+.btn{
+  align-items: center;
+  justify-content: center;
+  color: #ffffff ;
+  background-color: #103574;
+  border-bottom: #103574;
+}

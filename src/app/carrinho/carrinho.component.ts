@@ -1,6 +1,10 @@
+import { VendaModel } from './../model/VendaModel';
+import { VendaService } from './../services/venda.service';
+import { environment } from './../environments/environment';
 import { ItemCarrinho } from './../model/ItemCarrinhoModel';
 import { Component, OnInit } from '@angular/core';
 import { carrinho } from '../environments/carrinho';
+import { UserModel } from '../model/UserModel';
 @Component({
   selector: 'app-carrinho',
   templateUrl: './carrinho.component.html',
@@ -9,7 +13,8 @@ import { carrinho } from '../environments/carrinho';
 export class CarrinhoComponent implements OnInit {
   public carrinhoLocal = carrinho;
   public total: number = 0;
-  constructor() { }
+  public endereco = environment.endereco;
+  constructor(private vendaService: VendaService) { }
 
   ngOnInit(): void {
     this.calcularSubtotal();
@@ -18,14 +23,14 @@ export class CarrinhoComponent implements OnInit {
   }
 
   calcularTotal() {
-    let totalSubtotal:number =0;
-    for(let itemCarrinho of this.carrinhoLocal){
-      totalSubtotal+= itemCarrinho.subtotal;
+    let totalSubtotal: number = 0;
+    for (let itemCarrinho of this.carrinhoLocal) {
+      totalSubtotal += itemCarrinho.subtotal;
     }
-    this.total= totalSubtotal;
+    this.total = totalSubtotal;
   }
   calcularSubtotal() {
-    for(let itemCarrinho of this.carrinhoLocal){
+    for (let itemCarrinho of this.carrinhoLocal) {
       itemCarrinho.subtotal = itemCarrinho.qtde * itemCarrinho.produto.precoVendaProduto;
     }
   }
@@ -36,21 +41,47 @@ export class CarrinhoComponent implements OnInit {
   }
 
   diminuirQtde(itemCarrinho: ItemCarrinho) {
-    if(itemCarrinho.qtde > 1){
+    if (itemCarrinho.qtde > 1) {
       itemCarrinho.qtde--;
       this.ngOnInit();
     }
   }
 
-  removerItemCarrinho(itemCarrinho:ItemCarrinho){
-    const index:number = this.carrinhoLocal.indexOf(itemCarrinho)
-    if(index > -1){
-      this.carrinhoLocal.splice(index,1);
+  removerItemCarrinho(itemCarrinho: ItemCarrinho) {
+    const index: number = this.carrinhoLocal.indexOf(itemCarrinho)
+    if (index > -1) {
+      this.carrinhoLocal.splice(index, 1);
       this.ngOnInit();
     }
   }
 
-  finalizarCompra(){
+  finalizarCompra() {
+    let idCarrinho = 0;
 
+    this.vendaService.ultimoIdCarrinho().subscribe((resp: VendaModel) => {
+      if (resp != null) idCarrinho = resp.idCarrinho + 1;
+      this.gerarVenda(idCarrinho);
+    });
+
+
+
+  }
+
+  gerarVenda(idCarrinho: number) {
+
+    for (let item of this.carrinhoLocal) {
+      let venda = new VendaModel();
+      let userModel = new UserModel();
+      userModel.id = environment.id;
+      venda.produto = item.produto;
+      venda.idCarrinho = idCarrinho;
+      venda.qtdeProduto = item.qtde;
+      venda.usuario = userModel;
+      venda.formaPagamento = "pix";
+
+      this.vendaService.criarVenda(venda).subscribe((resp: VendaModel) => {
+        console.log(resp);
+      });
+    }
   }
 }

@@ -6,5 +6,6 @@ export const environment = {
   token:'',
   isAdmin:false,
   exibirMenuRodape: true,
+  endereco:''
 
 }

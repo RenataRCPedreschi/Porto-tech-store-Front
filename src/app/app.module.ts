@@ -41,12 +41,8 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
     HttpClientModule,
     FormsModule
   ],
-<<<<<<< Updated upstream
-  providers: [],//CabecalhoComponent],
-=======
   providers: [{provide: DEFAULT_CURRENCY_CODE,
     useValue: 'BRL'}],
->>>>>>> Stashed changes
   bootstrap: [AppComponent]
 })
 export class AppModule { }

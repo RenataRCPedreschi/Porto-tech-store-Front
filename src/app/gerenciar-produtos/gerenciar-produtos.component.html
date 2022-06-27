@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="isAdmin(); else naoadmin" >
   <h3 class="text-center">Bem vindo admin. - Gerencie seus produtos</h3>
 
   <table class="table">
@@ -25,3 +25,9 @@
   <button class="btn btn-dark mt-1" (click)="chamarPagProduto()">Novo Produto</button>
 
 </div>
+
+<ng-template #naoadmin>
+  <div class="container">
+    <h2>Você não é um administrador</h2>
+  </div>
+</ng-template>

@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { ProdutoService } from './../services/produto.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -30,6 +31,10 @@ export class EditarProdutoComponent implements OnInit {
     });
 
 
+  }
+
+  isAdmin(){
+    return environment.isAdmin ==true ;
   }
 
 }

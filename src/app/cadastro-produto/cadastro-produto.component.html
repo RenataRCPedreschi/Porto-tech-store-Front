@@ -1,4 +1,5 @@
-<section class="container">
+<section class="container" *ngIf="isAdmin(); else naoadmin" >
+
   <img src="../../assets/img/logo-sem-fundo.png" class="rounded mx-auto d-block w-25
     " alt="...">
   <form class="d-flex flex-column align-items-center" (ngSubmit)="addProdutosBancoDados()">
@@ -36,3 +37,9 @@
     <button type="submit" class="btn btn-dark">Cadastrar</button>
   </form>
 </section>
+
+<ng-template #naoadmin>
+  <div class="container">
+    <h2>Você não é um administrador</h2>
+  </div>
+</ng-template>

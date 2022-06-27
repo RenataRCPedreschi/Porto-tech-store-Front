@@ -14,7 +14,7 @@
 
     <nav>
       <ul>
-        <li class="userImg" *ngIf="isNotLogado(); else logado">
+        <li class="userImg flex-wrap" *ngIf="isNotLogado(); else logado">
           <a routerLink="login" (click) = "esconderHeaderRodape()">
             <img src="../../assets/img/userlogin.png" alt="login">
             Entre/Cadastre-se
@@ -22,13 +22,12 @@
         </li>
         <ng-template #logado>
           <li class="userImg">
-            <a routerLink="login" (click) = "esconderHeaderRodape()">
               <img src="../../assets/img/userlogin.png" alt="login">
-              bem vindo logado
-            </a>
+              Bem-vindo <small>{{username}}</small>
           </li>
-          <li>
-            <a>
+          <li class="carrinhoImg">
+            <a (click)="sair()">
+              <img src="../../assets/img/log-out-regular-24.png" alt="sair">
               Sair
             </a>
           </li>
@@ -38,7 +37,7 @@
           <a routerLink="carrinho">
             <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
             Meu carrinho
-            <span>{{tamanhoCarrinho}}</span>
+           <span>{{tamanhoCarrinho}}</span>
           </a>
         </li>
       </ul>

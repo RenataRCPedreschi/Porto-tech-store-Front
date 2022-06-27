@@ -68,6 +68,8 @@ header{
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  text-align: center;
   gap: 24px;
   margin-right: 18px;
 

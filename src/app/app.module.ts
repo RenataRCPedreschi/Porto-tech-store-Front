@@ -41,7 +41,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [],//CabecalhoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

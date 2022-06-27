@@ -1,6 +1,7 @@
 import { ProdutoService } from './../services/produto.service';
 import { ProdutoModel } from './../model/ProdutoModel';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-cadastro-produto',
@@ -20,4 +21,9 @@ export class CadastroProdutoComponent implements OnInit {
       console.log("resposta"+resp);
     });
   }
+
+  isAdmin(){
+    return environment.isAdmin ==true ;
+  }
+
 }

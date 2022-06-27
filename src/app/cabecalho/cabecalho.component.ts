@@ -10,10 +10,12 @@ import { carrinho } from '../environments/carrinho';
 export class CabecalhoComponent implements OnInit {
 
   tamanhoCarrinho = carrinho.length;
+  username = environment.username;
   constructor() { }
   ngOnInit(): void {
-    console.log(carrinho.length)
-    console.log(carrinho)
+    this.tamanhoCarrinho = carrinho.length;
+    console.log(this.tamanhoCarrinho);
+    console.log(this.username);
   }
 
   isNotLogado(): boolean{
@@ -23,5 +25,9 @@ export class CabecalhoComponent implements OnInit {
 
   esconderHeaderRodape(){
     environment.exibirMenuRodape=false;
+
+  }
+  sair(){
+
   }
 }

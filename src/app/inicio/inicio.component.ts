@@ -1,6 +1,7 @@
+import { CabecalhoComponent } from './../cabecalho/cabecalho.component';
 import { ItemCarrinho } from '../model/ItemCarrinhoModel';
 import { ProdutoService } from './../services/produto.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutoModel } from '../model/ProdutoModel';
 import { carrinho } from '../environments/carrinho';
@@ -13,7 +14,7 @@ import { carrinho } from '../environments/carrinho';
 export class InicioComponent implements OnInit {
 
   public listaProdutos:ProdutoModel[] = [];
-  constructor(private router: Router,private produtoService: ProdutoService) { }
+  constructor(private router: Router,private produtoService: ProdutoService){} //private cabecalho: CabecalhoComponent) { }
 
   ngOnInit(): void {
 
@@ -29,5 +30,7 @@ export class InicioComponent implements OnInit {
     itemCarrinho.produto = produto;
     itemCarrinho.qtde=1;
     carrinho.push(itemCarrinho);
-  }
+
+    //this.cabecalho.ngOnInit();
+}
 }

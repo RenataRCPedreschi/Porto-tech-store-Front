@@ -43,6 +43,10 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE,
     useValue: 'BRL'}],
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   bootstrap: [AppComponent]
 })
 export class AppModule { }

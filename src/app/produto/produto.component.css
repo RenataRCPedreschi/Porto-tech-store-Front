@@ -1,7 +1,4 @@
-
-
-
-.btnComprar{
-border: 5px;
-
+.btn{
+    background-color: #103574;
+    color: white;
 }

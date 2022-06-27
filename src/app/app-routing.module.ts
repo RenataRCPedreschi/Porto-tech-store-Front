@@ -19,7 +19,11 @@ const routes: Routes = [{
 {path:'cadastroproduto',component:CadastroProdutoComponent},
 {path:'gerenciadorprodutos', component:GerenciarProdutosComponent},
 {path:'produto-editar/:id',component:EditarProdutoComponent},
+<<<<<<< Updated upstream
 {path:'produto/:id',component: ProdutoComponent}
+=======
+{path:'produto',component:ProdutoComponent}
+>>>>>>> Stashed changes
 ];
 
 @NgModule({

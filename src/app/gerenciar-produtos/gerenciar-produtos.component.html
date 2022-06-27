@@ -15,8 +15,8 @@
         <td><img src="{{produto.urlFotoProduto}}" alt="Foto produto" height="128" width="128"></td>
         <td>{{produto.nomeProduto}}</td>
         <td>R${{produto.precoVendaProduto}}</td>
-        <td class>
-          <button class="btn btn-dark" [routerLink]="['/produto-editar',produto.idProduto]">Editar</button>
+        <td>
+          <button class="btn btn-dark entrar" [routerLink]="['/produto-editar',produto.idProduto]">Editar</button>
           <button class="btn btn-dark" (click) = "deletarProduto(produto.idProduto)">Excluir</button>
         </td>
       </tr>

@@ -13,10 +13,10 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../../assets/img/br-feature-galaxy-book-s-intel-409794316.png" class="d-block w-100" alt="...">
+          <img class="d-block w-100" src="../../assets/img/br-feature-galaxy-book-s-intel-409794316.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../../assets/img/buds-2.jpg" class="d-block w-100" alt="...">
+          <img class="d-block w-100" src="../../assets/img/buds-2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
           <img src="../../assets/img/Samsung_Galaxy-S22-1-1536x864.jpg" class="d-block w-100" alt="...">
@@ -51,7 +51,7 @@
           </div>
 
           <div class="d-flex flex-column">
-            <p class="preco">R${{produto.precoVendaProduto}}</p>
+            <p class="preco">{{produto.precoVendaProduto | currency}}</p>
 
             <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
             <a class="btn mt-2" style="background-color: rgb(26, 26, 219);" (click)="adicionarCarrinho(produto)">Adicionar ao carrinho</a>

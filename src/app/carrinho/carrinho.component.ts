@@ -87,4 +87,8 @@ export class CarrinhoComponent implements OnInit {
       });
     }
   }
+
+  isLogado(){
+    return environment.token != '';
+  }
 }

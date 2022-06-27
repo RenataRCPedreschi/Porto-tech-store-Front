@@ -1,6 +1,5 @@
-import { environment } from './../environments/environment';
+import { ItemCarrinho } from '../model/ItemCarrinhoModel';
 import { ProdutoService } from './../services/produto.service';
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutoModel } from '../model/ProdutoModel';
@@ -26,7 +25,9 @@ export class InicioComponent implements OnInit {
 
   }
   adicionarCarrinho(produto : ProdutoModel){
-    carrinho.push(produto);
-    console.log(carrinho);
+    const itemCarrinho:ItemCarrinho = new ItemCarrinho();
+    itemCarrinho.produto = produto;
+    itemCarrinho.qtde=1;
+    carrinho.push(itemCarrinho);
   }
 }

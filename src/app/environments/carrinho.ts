@@ -1,3 +1,3 @@
-import { ProdutoModel } from "../model/ProdutoModel";
+import { ItemCarrinho } from './../model/ItemCarrinhoModel';
 
-export const carrinho:ProdutoModel[] = [];
+export const carrinho:ItemCarrinho[] = [];

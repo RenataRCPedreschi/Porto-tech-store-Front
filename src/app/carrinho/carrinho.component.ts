@@ -14,6 +14,7 @@ export class CarrinhoComponent implements OnInit {
   public carrinhoLocal = carrinho;
   public total: number = 0;
   public endereco = environment.endereco;
+  public metodoPagamento:string = '';
   constructor(private vendaService: VendaService) { }
 
   ngOnInit(): void {
@@ -54,7 +55,10 @@ export class CarrinhoComponent implements OnInit {
       this.ngOnInit();
     }
   }
-
+  receberPagamento(pagamento:string){
+    console.log(pagamento);
+    this.metodoPagamento = pagamento;
+  }
   finalizarCompra() {
     let idCarrinho = 0;
 
@@ -77,8 +81,7 @@ export class CarrinhoComponent implements OnInit {
       venda.idCarrinho = idCarrinho;
       venda.qtdeProduto = item.qtde;
       venda.usuario = userModel;
-      venda.formaPagamento = "pix";
-
+      venda.formaPagamento = this.metodoPagamento;
       this.vendaService.criarVenda(venda).subscribe((resp: VendaModel) => {
         console.log(resp);
       });

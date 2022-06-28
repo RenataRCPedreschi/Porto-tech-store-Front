@@ -1,12 +1,10 @@
 import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
@@ -17,6 +15,8 @@ import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,10 +43,6 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE,
     useValue: 'BRL'}],
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-  bootstrap: [AppComponent]
+bootstrap: [AppComponent]
 })
 export class AppModule { }

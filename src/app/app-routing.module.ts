@@ -4,10 +4,11 @@ import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produ
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 
 const routes: Routes = [{
   path: '', redirectTo: 'inicio', pathMatch: 'full'
@@ -19,12 +20,9 @@ const routes: Routes = [{
 {path:'cadastroproduto',component:CadastroProdutoComponent},
 {path:'gerenciadorprodutos', component:GerenciarProdutosComponent},
 {path:'produto-editar/:id',component:EditarProdutoComponent},
-<<<<<<< Updated upstream
-{path:'produto/:id',component: ProdutoComponent}
-=======
-{path:'produto',component:ProdutoComponent}
->>>>>>> Stashed changes
-];
+{path:'produto/:id',component: ProdutoComponent},
+{path: 'faleconosco',component: FaleConoscoComponent}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

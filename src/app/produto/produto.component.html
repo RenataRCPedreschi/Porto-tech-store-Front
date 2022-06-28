@@ -10,11 +10,20 @@
           <div class="card text-center ml-5 mr-5 card-tm">
 
             <div class="card-body">
-              <h5 class="card-title text-center mt-5"></h5>
+              <h5 class="card-title text-center mt-5">{{produto.nomeProduto}}</h5>
 
-              <img src="" class="text-center img-fluid" alt="">
+              <img src={{produto.urlFotoProduto}} class="text-center img-fluid" alt="" height="300" width="300">
 
-              <div><img src=""alt=""></div>
+              <div>
+                {{produto.descricaoProduto}}
+              </div>
+              <div>
+                Marca: {{produto.marcaProduto}}
+              </div>
+              <div><a [routerLink]="['/busca/categoria' , produto.categoriaProduto]">
+                Categoria:{{produto.categoriaProduto}}
+              </a>
+              </div>
 
               <p class="justify"></p>
             </div>
@@ -25,8 +34,8 @@
         </small>
 
       </div>
-     
-     
+
+
 
       <div class="col-md-4">
 
@@ -36,34 +45,21 @@
             <div class="card text-center ml-5 mr-5">
 
               <div class="card-body">
-                <div>
-                  <h4 class="text-center mt-5" id="colorRed">
-                    <s></s></h4>
-                  <h5 class="text-center" id="fontmax"><b></b>
-                  </h5>
-
-                  <div>
-                    <img
-                      src="https://cdn-icons.flaticon.com/png/512/5645/premium/5645197.png?token=exp=1654801346~hmac=23b14d12771a730287d60d0f447d88b1"
-                      with="25px" height="25px" alt="">
-                    <label class="ml-3"></label>
-                  </div>
-                  
-
-
+                <div *ngIf = "emEstoque(); else naoestoque">
+                  <small  class = "estoqueSim">Em estoque</small>
                 </div>
-
-                
-                
+                <ng-template #naoestoque>
+                  <small class = "estoqueNao text-start">Sem estoque</small>
+                </ng-template>
+                <div></div>
               <p class="fontmini">Comprando agora receba em até 3 dias úteis
                 </p>
 
                 <div>
-                  <button class="btn btn mt-5 mb-5 primary" id="button"> COMPRAR</button>
-                
-                  
-
-
+                  <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
+                  <a class="btn mt-2" style="background-color: rgb(26, 26, 219);"
+                    (click)="adicionarCarrinho(produto)">Adicionar
+                    ao carrinho</a>
                 </div>
 
               </div>

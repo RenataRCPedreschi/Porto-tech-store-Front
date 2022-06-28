@@ -17,8 +17,8 @@ import { SobreComponent } from './sobre/sobre.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { BuscaComponent } from './busca/busca.component';
 import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
+import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
     EditarProdutoComponent,
     SobreComponent,
     FaleConoscoComponent,
-    BuscaComponent,
+    BuscaCategoriaComponent,
     BuscaNomeComponent
   ],
   imports: [

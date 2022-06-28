@@ -1,4 +1,4 @@
-import { BuscaComponent } from './busca/busca.component';
+import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produtos.component';
@@ -24,7 +24,7 @@ const routes: Routes = [{
 {path:'produto-editar/:id',component:EditarProdutoComponent},
 {path:'produto/:id',component: ProdutoComponent},
 {path: 'faleconosco',component: FaleConoscoComponent},
-{path:'busca/categoria/:categoria',component:BuscaComponent},
+{path:'busca/categoria/:categoria',component:BuscaCategoriaComponent},
 {path:'busca/nome/:nome', component:BuscaNomeComponent}
 
 ]

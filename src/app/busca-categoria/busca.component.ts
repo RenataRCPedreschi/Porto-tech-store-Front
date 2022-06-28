@@ -10,7 +10,7 @@ import { ProdutoService } from '../services/produto.service';
   templateUrl: '../inicio/inicio.component.html',
   styleUrls: ['../inicio/inicio.component.css']
 })
-export class BuscaComponent implements OnInit {
+export class BuscaCategoriaComponent implements OnInit {
 
   public listaProdutos: ProdutoModel[] = [];
   private categoria: string = '';

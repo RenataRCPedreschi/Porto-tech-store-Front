@@ -28,6 +28,15 @@ export class CabecalhoComponent implements OnInit {
 
   }
   sair(){
+    environment.endereco='';
+    environment.id=0;
+    environment.isAdmin=false;
+    environment.username='';
+    environment.token=''
+  }
 
+  isAdmin():Boolean{
+
+    return environment.isAdmin;
   }
 }

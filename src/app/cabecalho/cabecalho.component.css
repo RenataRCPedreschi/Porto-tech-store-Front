@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-header{
+header {
   z-index: 1;
 }
 
@@ -17,12 +17,13 @@ header{
   background-color: #f5f5f5;
 }
 
-.logo{
+.logo {
   flex-shrink: 0;
   margin: 1rem;
 }
 
-.busca { /*FORM*/
+.busca {
+  /*FORM*/
   margin: 0 5px;
   width: 500px;
   background-color: white;
@@ -102,8 +103,14 @@ nav ul {
   height: 30px;
 
 }
-li{
+
+li {
   padding: 6px;
+}
+
+.adminLi:hover {
+  border-bottom: 5px solid #0aa1dd;
+
 }
 
 @media (max-width:700px) {
@@ -113,18 +120,20 @@ li{
 }
 
 
-@media(max-width: 300px){
+@media(max-width: 300px) {
   .userImg img {
     width: 24px;
     height: 24px;
 
   }
+
   .carrinhoImg img {
     width: 24px;
     height: 24px;
 
   }
-  li{
+
+  li {
     font-size: 15px;
 
   }

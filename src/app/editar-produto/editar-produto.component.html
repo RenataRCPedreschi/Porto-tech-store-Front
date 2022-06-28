@@ -26,8 +26,14 @@
       <input type="text" class="form-control" name="urlFoto" [(ngModel)] = "produto.urlFotoProduto"/>
     </div>
     <div class="mb-3 form-group w-50">
-      <label class="form-label" for="urlFoto">Categoria Produto</label>
-      <input type="text" class="form-control" name="categoriaProduto" [(ngModel)] = "produto.categoriaProduto"/>
+      <label class="form-label" for="categoriaProduto">Categoria Produto</label>
+      <select class="form-select" name="categoriaProduto" [(ngModel)] = "produto.categoriaProduto">
+        <option selected>Selecione uma categoria</option>
+        <option value="Celulares">Celulares</option>
+        <option value="Notebooks">Notebooks</option>
+        <option value="Fones de Ouvido">Fones de Ouvido</option>
+        <option value="Smartwatches">Smartwatches</option>
+        </select>
     </div>
     <div class="mb-3 form-group w-50">
       <label class="form-label" for="marcaProduto">Marca Produto</label>

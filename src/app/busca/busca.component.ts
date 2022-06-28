@@ -23,6 +23,7 @@ export class BuscaComponent implements OnInit {
     //mudar parametro e atualizar página
     this.acRoute.params.subscribe(resp=>{
       this.categoria = (resp['categoria']);
+      if(this.categoria == 'foneouvido')this.categoria ='Fones de Ouvido';
       this.produtoService.buscarProdutosByCategoria(this.categoria).subscribe((resp: ProdutoModel[]) => {
         this.listaProdutos = resp;
       });

@@ -33,4 +33,8 @@ export class InicioComponent implements OnInit {
 
     //this.cabecalho.ngOnInit();
 }
+exibirCarrossel():Boolean{
+
+  return true;
+}
 }

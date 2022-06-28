@@ -1,4 +1,4 @@
-<section class="container text">
+<section class="container text" *ngIf="!isLogado(); else logado">
   <div class="logo">
   <img src="../../assets/img/Logo PortoTech.png" class="rounded mx-auto d-block w-25"  alt="logo">
 </div>
@@ -19,3 +19,6 @@
       Não tem uma conta? <a routerLink='/cadastrarusuario'>Cadastre-se</a>
     </p>
 </section>
+<ng-template #logado>
+  <h3>Você já está logado saia se quiser trocar de conta</h3>
+</ng-template>

@@ -11,6 +11,8 @@ export class CabecalhoComponent implements OnInit {
 
   tamanhoCarrinho = carrinho.length;
   username = environment.username;
+  buscarNome:string = '';
+
   constructor() { }
   ngOnInit(): void {
     this.tamanhoCarrinho = carrinho.length;

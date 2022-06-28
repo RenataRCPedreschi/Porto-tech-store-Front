@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { AuthService } from '../services/auth.service';
 import { UserModel } from '../model/UserModel';
 import { ViaCEPService } from '../services/viacep.service';
@@ -38,5 +39,8 @@ export class CadastrarUsuarioComponent implements OnInit {
     })
   }
 
+  isLogado():boolean{
+    return environment.token !='';
+  }
 
 }

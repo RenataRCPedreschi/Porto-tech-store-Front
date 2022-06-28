@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" *ngIf="!isLogado(); else logado">
   <img src="../../assets/img/logo-sem-fundo.png" class="rounded mx-auto d-block w-25
     " alt="...">
     <form class="d-flex flex-column align-items-center">
@@ -91,3 +91,7 @@
     <button type="submit" class="btn btn-dark" (click)="cadastrarPessoa()">Cadastrar</button>
   </form>
 </section>
+
+<ng-template #logado>
+  <h3>Você está logado saia se quiser criar um novo cadastro</h3>
+</ng-template>

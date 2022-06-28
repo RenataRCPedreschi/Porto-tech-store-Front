@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  isLogado():boolean{
+    return environment.token !='';
+  }
   entrar(){
     this.auth.entrar(this.userLogin).subscribe((resp:UserLogin)=>{
         this.userLogin = resp;

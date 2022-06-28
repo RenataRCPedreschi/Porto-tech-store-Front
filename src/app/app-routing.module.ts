@@ -10,6 +10,7 @@ import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario
 import { ProdutoComponent } from './produto/produto.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
+import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
 
 const routes: Routes = [{
   path: '', redirectTo: 'inicio', pathMatch: 'full'
@@ -23,7 +24,8 @@ const routes: Routes = [{
 {path:'produto-editar/:id',component:EditarProdutoComponent},
 {path:'produto/:id',component: ProdutoComponent},
 {path: 'faleconosco',component: FaleConoscoComponent},
-{path:'busca/:categoria',component:BuscaComponent}
+{path:'busca/categoria/:categoria',component:BuscaComponent},
+{path:'busca/nome/:nome', component:BuscaNomeComponent}
 
 ]
 

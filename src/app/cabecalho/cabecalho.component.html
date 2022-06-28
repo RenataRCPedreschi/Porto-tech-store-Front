@@ -7,8 +7,8 @@
 
     <form class="busca">
       <fieldset class="d-flex flex-wrap">
-        <input class="inputText" type="text" placeholder="Pesquise aqui seu produto">
-        <input class="inputButton" type="button" value="">
+        <input class="inputText" type="text" placeholder="Pesquise aqui seu produto"  [(ngModel)] = "buscarNome" >
+        <input class="inputButton" type="button" [routerLink]="['/busca/nome/',buscarNome]">
       </fieldset>
     </form>
 

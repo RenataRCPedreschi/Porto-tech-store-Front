@@ -1,3 +1,5 @@
+<!-- CARRINHO -->
+
 <div class="container mt-5">
 
   <div class="row">
@@ -49,11 +51,17 @@
       </div>
     </div>
 
+    <!-- RESUMO DE COMPRA -->
+
     <div class="col-md-4">
 
       <div class="card">
         <h3 class="card-header">Resumo</h3>
         <div *ngIf="isLogado(); else naologado">
+          <div class="endereco-entrega">
+            <h5>Endereço de entrega</h5>
+            <p class="mx-2">{{endereco}}</p>
+          </div>
         <div class="forma-pagmento mx-3 mt-1">
             <h5>Forma de Pagamento</h5>
 
@@ -90,10 +98,7 @@
 
 
 
-          <div class="endereco-entrega">
-            <h5>Endereço de entrega</h5>
-            <p class="mx-2">{{endereco}}</p>
-          </div>
+          
 
           <div class="card-body">
             <h5 class="text-center">Total</h5>

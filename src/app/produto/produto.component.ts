@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { carrinho } from '../environments/carrinho';
 import { ItemCarrinho } from '../model/ItemCarrinhoModel';
 import { ProdutoModel } from '../model/ProdutoModel';
@@ -31,6 +32,13 @@ export class ProdutoComponent implements OnInit {
       console.log(produto);
       console.log(item.produto);
       if (produto.idProduto == item.produto.idProduto) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Produto Adicionado ao Carrinho',
+          showConfirmButton: false,
+          timer: 1500
+        });
         item.qtde++;
         return;
       }
@@ -39,6 +47,13 @@ export class ProdutoComponent implements OnInit {
     itemCarrinho.produto = produto;
     itemCarrinho.qtde = 1;
     carrinho.push(itemCarrinho);
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Produto Adicionado ao Carrinho',
+      showConfirmButton: false,
+      timer: 1500
+    });
     //this.cabecalho.ngOnInit();
   }
 

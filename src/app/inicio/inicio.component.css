@@ -8,11 +8,11 @@ height: 100% !important;
 width: 100% !important;
 
 }
-.carousel-inner{
+/* .carousel-inner{
 padding: 10px;
 margin: 10px;
 
-}
+} */
 
 .btn{
     align-items: center;
@@ -28,7 +28,7 @@ margin: 10px;
   }
 
   .preco{
-    margin-bottom: 16px;
+    margin: 18px 0;
     font-size: 20px;
     color: #0AA1DD;
     text-align: center;
@@ -58,7 +58,10 @@ margin: 10px;
     justify-content: space-between;} */
   
   
-
+.cardStyle{
+  margin-bottom: 25px;
+  
+}
 
 
 

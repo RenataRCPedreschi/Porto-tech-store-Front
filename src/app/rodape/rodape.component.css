@@ -3,7 +3,6 @@ footer {
         margin-top: 15px;
     display: flex;
     flex-direction: column; 
-    /* position: absolute; */
     bottom: 0px;
     width: 100%;  
     text-align: center;
@@ -16,10 +15,13 @@ footer {
     justify-content: space-between !important;
     flex-wrap: wrap;
     margin: 0 auto;
+    
 }
-
+.divStyle div{
+    margin: 0 auto;
+    width: 200px;
+}
 .info{
-    /* text-align: justify;  */
     color:#000000df;
 }
 
@@ -50,7 +52,7 @@ a:hover {
 }
 
 .second-bar {
-    height: 60px;
+    height: 100%;
     align-items: center;
 }
 
@@ -71,3 +73,11 @@ a:hover {
     height: 40px;
 }
 
+@media(max-width: 325px) {
+   
+    .container{
+        display: flex;
+        justify-content: center !important;
+        margin: 0 auto !important;
+    }
+  }

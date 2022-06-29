@@ -1,6 +1,10 @@
 <header class="container-fluid">
 
   <div class="cabecalho">
+    <div class="container ">
+
+
+    
     <a routerLink="" class="logo">
       <img src="../../assets/img/logo-horizontal.png" alt="Logo PortoTech Store" width="150" height="45">
     </a>
@@ -37,8 +41,8 @@
 
     <ng-template #naoadm>
 
-      <nav>
-        <ul>
+      <nav >
+        <ul class="listaStyle">
           <li class="userImg flex-wrap" *ngIf="isNotLogado(); else logado">
             <a routerLink="login">
               <img src="../../assets/img/userlogin.png" alt="login">
@@ -72,7 +76,7 @@
       </nav>
     </ng-template>
 
-
+  </div>
 
   </div>
 

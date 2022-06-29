@@ -49,7 +49,10 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     HttpClientModule,
     FormsModule
   ],
-  providers: [{provide: DEFAULT_CURRENCY_CODE,
+  providers: [
+    
+    
+  {provide: DEFAULT_CURRENCY_CODE,
     useValue: 'BRL'}],
 bootstrap: [AppComponent]
 })

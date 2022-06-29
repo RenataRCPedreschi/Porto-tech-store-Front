@@ -11,6 +11,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
+import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 
 const routes: Routes = [{
   path: '', redirectTo: 'inicio', pathMatch: 'full'
@@ -25,8 +26,8 @@ const routes: Routes = [{
 {path:'produto/:id',component: ProdutoComponent},
 {path: 'faleconosco',component: FaleConoscoComponent},
 {path:'busca/categoria/:categoria',component:BuscaCategoriaComponent},
-{path:'busca/nome/:nome', component:BuscaNomeComponent}
-
+{path:'busca/nome/:nome', component:BuscaNomeComponent},
+{path:'busca/marca/:marca', component:BuscaMarcaComponent},
 ]
 
 @NgModule({

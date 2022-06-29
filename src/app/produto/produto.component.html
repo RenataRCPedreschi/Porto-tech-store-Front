@@ -18,7 +18,9 @@
                 {{produto.descricaoProduto}}
               </div>
               <div>
-                Marca: {{produto.marcaProduto}}
+                <a [routerLink]="['/busca/marca',produto.marcaProduto]">
+                  Marca: {{produto.marcaProduto}}
+                </a>
               </div>
               <div><a [routerLink]="['/busca/categoria' , produto.categoriaProduto]">
                 Categoria:{{produto.categoriaProduto}}

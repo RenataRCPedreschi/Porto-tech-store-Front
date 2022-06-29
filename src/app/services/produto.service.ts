@@ -25,6 +25,10 @@ export class ProdutoService{
   buscarProdutosByNome(nome:string):Observable<ProdutoModel[]>{
     return this.httpClient.get<ProdutoModel[]>(this.url+'/nome/'+nome);
   }
+  buscarProdutosByMarca(marca:string):Observable<ProdutoModel[]>{
+
+    return this.httpClient.get<ProdutoModel[]>(this.url+'/marca/'+marca);
+  }
   criarNovoProduto(produto: ProdutoModel):Observable<any>{
     return this.httpClient.post<ProdutoModel>(this.url,produto);
   }

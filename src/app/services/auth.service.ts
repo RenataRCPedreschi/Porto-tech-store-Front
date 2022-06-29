@@ -1,7 +1,7 @@
+import { UserModel } from './../model/UserModel';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { UserModel } from '../model/UserModel';
 import { UserLogin } from '../model/UserLogin';
 import { environment } from '../environments/environment';
 
@@ -16,6 +16,9 @@ export class AuthService{
   constructor(private httpClient : HttpClient){
 
   }
+  buscarUserById(id:number):Observable<UserModel>{
+    return this.httpClient.get<UserModel>(this.url+"/"+id);
+  }
   cadastrar(userModel: UserModel) :Observable<UserModel>{
     console.log(this.httpClient.post<UserModel>(this.url + '/cadastrar', userModel))
     return this.httpClient.post<UserModel>(this.url + '/cadastrar', userModel);
@@ -26,6 +29,9 @@ export class AuthService{
     return this.httpClient.post<UserLogin>(this.url+'/logar',userLogin);
   }
 
+  atualizar(usuario: UserModel):Observable<UserModel>{
+    return this.httpClient.put<UserModel>(this.url,usuario);
+  }
 
   logado(): boolean{
     console.log(environment.token!='');

@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
 import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
     FaleConoscoComponent,
     BuscaCategoriaComponent,
     BuscaNomeComponent,
-    BuscaMarcaComponent
+    BuscaMarcaComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,

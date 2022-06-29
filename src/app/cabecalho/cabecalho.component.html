@@ -47,7 +47,7 @@
           </li>
           <ng-template #logado>
             <li class="userImg">
-              <a routerLink="">
+              <a [routerLink]="['/usuario/editar',idUsuario]">
                 <img src="../../assets/img/userlogin.png" alt="login">
                 <small>{{nome}}</small>
               </a>

@@ -1,10 +1,9 @@
-import { CabecalhoComponent } from './../cabecalho/cabecalho.component';
 import { ItemCarrinho } from '../model/ItemCarrinhoModel';
 import { ProdutoService } from './../services/produto.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { ProdutoModel } from '../model/ProdutoModel';
 import { carrinho } from '../environments/carrinho';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -20,10 +19,7 @@ export class InicioComponent implements OnInit {
 
     this.produtoService.buscarProdutos().subscribe((lista: ProdutoModel[]) => {
       this.listaProdutos = lista;
-      console.log(this.listaProdutos);
     });
-
-
   }
   adicionarCarrinho(produto: ProdutoModel) {
     //Verificando se o produto já existe no carinho

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { environment } from './../environments/environment';
 import { AuthService } from '../services/auth.service';
 import { UserModel } from '../model/UserModel';
@@ -13,7 +14,7 @@ export class CadastrarUsuarioComponent implements OnInit {
 
   newUser : UserModel = new UserModel();
 
-  constructor(private viacepService : ViaCEPService , private auth: AuthService) { }
+  constructor(private viacepService : ViaCEPService , private auth: AuthService,private router:Router) { }
 
   ngOnInit(): void {
 
@@ -36,7 +37,9 @@ export class CadastrarUsuarioComponent implements OnInit {
     console.log(this.newUser);
     this.auth.cadastrar(this.newUser).subscribe(resp=>{
       console.log(resp);
+      this.router.navigate(['/login']);
     })
+
   }
 
   isLogado():boolean{

@@ -40,16 +40,19 @@
       <nav>
         <ul>
           <li class="userImg flex-wrap" *ngIf="isNotLogado(); else logado">
-            <a routerLink="login" (click)="esconderHeaderRodape()">
+            <a routerLink="login">
               <img src="../../assets/img/userlogin.png" alt="login">
               Entre/Cadastre-se
             </a>
           </li>
           <ng-template #logado>
             <li class="userImg">
-              <img src="../../assets/img/userlogin.png" alt="login">
-              Bem-vindo <small>{{username}}</small>
-            </li>
+              <a click= "editarUsuario()">
+
+                <img src="../../assets/img/userlogin.png" alt="login">
+                <small>{{username}}</small>
+              </a>
+              </li>
             <li class="carrinhoImg">
               <a (click)="sair()"  routerLink="">
                 <img src="../../assets/img/sair.png" alt="sair">

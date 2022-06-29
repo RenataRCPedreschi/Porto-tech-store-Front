@@ -8,6 +8,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  environmentAppComponent = environment;
   title = 'PortoTechStore';
   environmentComponent = environment;
   constructor(public auth: AuthService){

@@ -25,10 +25,6 @@ export class CabecalhoComponent implements OnInit {
     return environment.token == '';
   }
 
-  esconderHeaderRodape(){
-    environment.exibirMenuRodape=false;
-
-  }
   sair(){
     environment.endereco='';
     environment.id=0;
@@ -40,5 +36,9 @@ export class CabecalhoComponent implements OnInit {
   isAdmin():Boolean{
 
     return environment.isAdmin;
+  }
+
+  editarUsuario(){
+
   }
 }

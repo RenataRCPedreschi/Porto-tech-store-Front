@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
         environment.id = this.userLogin.id;
         environment.username = this.userLogin.username;
         environment.token = this.userLogin.token;
-        environment.exibirMenuRodape = true;
         environment.isAdmin = this.userLogin.isAdmin;
         environment.endereco+=this.userLogin.endereco+',';
         environment.endereco+=this.userLogin.numero+' ';

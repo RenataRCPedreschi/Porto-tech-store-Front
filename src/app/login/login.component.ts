@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
         console.log(this.userLogin);
 
         environment.id = this.userLogin.id;
+        environment.nome= this.userLogin.nome;
         environment.username = this.userLogin.username;
         environment.token = this.userLogin.token;
         environment.isAdmin = this.userLogin.isAdmin;

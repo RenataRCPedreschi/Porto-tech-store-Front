@@ -10,14 +10,12 @@ import { carrinho } from '../environments/carrinho';
 export class CabecalhoComponent implements OnInit {
 
   tamanhoCarrinho = carrinho.length;
-  username = environment.username;
+  nome = environment.nome;
   buscarNome:string = '';
 
   constructor() { }
   ngOnInit(): void {
     this.tamanhoCarrinho = carrinho.length;
-    console.log(this.tamanhoCarrinho);
-    console.log(this.username);
   }
 
   isNotLogado(): boolean{
@@ -31,6 +29,7 @@ export class CabecalhoComponent implements OnInit {
     environment.isAdmin=false;
     environment.username='';
     environment.token=''
+    environment.nome = '';
   }
 
   isAdmin():Boolean{
@@ -38,7 +37,4 @@ export class CabecalhoComponent implements OnInit {
     return environment.isAdmin;
   }
 
-  editarUsuario(){
-
-  }
 }

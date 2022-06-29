@@ -11,4 +11,5 @@ export class UserLogin {
   cidade!: string;
   estado!: string;
   cep!: string;
+  nome!:string;
 }

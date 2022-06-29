@@ -7,7 +7,7 @@
 
     <form class="busca">
       <fieldset class="d-flex flex-wrap">
-        <input class="inputText" type="text" placeholder="Pesquise aqui seu produto"  [(ngModel)] = "buscarNome" >
+        <input class="inputText" type="text" placeholder="Pesquise aqui seu produto" [(ngModel)]="buscarNome">
         <input class="inputButton" type="button" [routerLink]="['/busca/nome/',buscarNome]">
       </fieldset>
     </form>
@@ -20,7 +20,7 @@
               Gerenciar Produtos
             </a>
           </li>
-          <li class="userImg flex-wrap adminLi" >
+          <li class="userImg flex-wrap adminLi">
             <a routerLink="cadastroproduto">
               Cadastrar Produtos
             </a>
@@ -47,14 +47,14 @@
           </li>
           <ng-template #logado>
             <li class="userImg">
-              <a click= "editarUsuario()">
-
+              <a routerLink="">
                 <img src="../../assets/img/userlogin.png" alt="login">
-                <small>{{username}}</small>
+                <small>{{nome}}</small>
               </a>
-              </li>
+            </li>
+
             <li class="carrinhoImg">
-              <a (click)="sair()"  routerLink="">
+              <a (click)="sair()" routerLink="">
                 <img src="../../assets/img/sair.png" alt="sair">
                 Sair
               </a>

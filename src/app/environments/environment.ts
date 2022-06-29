@@ -5,6 +5,7 @@ export const environment = {
   username:'',
   token:'',
   isAdmin:false,
-  endereco:''
+  endereco:'',
+  nome:''
 
 }

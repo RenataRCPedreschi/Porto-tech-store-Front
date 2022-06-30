@@ -4,6 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { UserModel } from '../model/UserModel';
 import { ViaCEPService } from '../services/viacep.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastrar-usuario',
@@ -45,12 +46,19 @@ export class CadastrarUsuarioComponent implements OnInit {
       console.log(this.newUser);
       this.auth.cadastrar(this.newUser).subscribe(resp=>{
         console.log(resp);
-        this.router.navigate(['/login']);
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Cadastrado com sucesso!',
+          text:'Obrigada por comprar na PortoTechStore',
+          showConfirmButton: false,
+          timer: 1500
+        
       });
+      this.router.navigate(['/login']);
 
-    }else{
-      console.log('preencha todos os cmpos');
-    }
+    },erro=>{console.log(erro)});
+  }
 
   }
 

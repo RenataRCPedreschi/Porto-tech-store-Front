@@ -1,0 +1,110 @@
+.img-container {
+    display: flex;
+  }
+  
+  .card {
+    width: 300px;
+  }
+  h2{
+    color: #0c1885;
+  }
+  
+  .card-footer {
+    background-color: none;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+
+ 
+  }
+  
+  .foto-membro {
+    height: 200px;
+    width: 200px;
+    border: #ffffff solid 5px;
+    border-radius: 100%;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.7s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translate3d(0, -5px, 0);
+  }
+  
+  .card {
+    transition: 0.7s ease;
+  }
+  .card:hover {
+    color: #e8ecee;
+    transform: translate3d(0, -5px, 0);
+  }
+  
+  .card-heitor {
+    border: solid 3px #cfc20b;
+  }
+  .card-heitor:hover {
+    background-color: #cfdd7f;
+  }
+  
+  .card-mariana {
+    border: solid 3px #d43d0f;
+  }
+  .card-mariana:hover {
+    background-color: #e2876b;
+  }
+  
+  .card-patricia {
+    border: solid 3px #9e1faa;
+    display: flex;
+    align-items: center;
+  }
+  .card-patricia:hover {
+    background-color: #e097e0;
+  }
+  
+  .card-rafael {
+    border: solid 3px #034d0d;
+  }
+  .card-rafael:hover {
+    background-color: #619b50;
+  }
+  
+  .card-renata {
+    border: solid 3px #0c1885;
+  }
+  .card-renata:hover {
+    background-color: #1b79b8;
+  }
+  
+ 
+  
+  .div-topicos {
+    background-color: #88d0e6;
+    color: #0e0d0d;
+  }
+  
+  .titulo-topicos {
+    font-size: 40px;
+    color: #060225;
+    margin-bottom: 50px;
+  }
+  
+  
+  
+  @media (max-width: 767px) {
+    .img-container {
+      display: none;
+    }
+  
+    .div-topicos {
+      margin-bottom: 10px;
+    }
+  
+    
+  }

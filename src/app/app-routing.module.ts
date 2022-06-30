@@ -14,6 +14,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
 import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [{
   path: '', redirectTo: 'inicio', pathMatch: 'full'
@@ -31,7 +32,8 @@ const routes: Routes = [{
 {path:'busca/nome/:nome', component:BuscaNomeComponent},
 {path:'busca/marca/:marca', component:BuscaMarcaComponent},
 {path:'usuario/editar/:id',component:EditarUsuarioComponent},
-{path:'meuspedidos',component:MeuspedidosComponent}
+{path:'meuspedidos',component:MeuspedidosComponent},
+{path:'sobre',component:SobreComponent}
 ]
 
 @NgModule({

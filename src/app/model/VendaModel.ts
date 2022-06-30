@@ -1,6 +1,5 @@
 import { UserModel } from './UserModel';
 import { ProdutoModel } from "./ProdutoModel";
-import { UserLogin } from "./UserLogin";
 
 export class VendaModel{
   id!:number;
@@ -9,6 +8,8 @@ export class VendaModel{
   qtdeProduto!:number;
   formaPagamento!:string;
   usuario!:UserModel;
-
+  nomeProduto!:string;
+  total!:number | string;
+  createdDateProduto!:Date | string;
 
 }

@@ -22,4 +22,8 @@ export class VendaService {
     //return this.httpClient.post<VendaModel>(this.url, venda,this.token)
     return this.httpClient.post<VendaModel>(this.url, venda);
   }
+  getMeusPedidos(idUser: number):Observable<VendaModel[]>{
+
+    return this.httpClient.get<VendaModel[]>(this.url+"/usuario/"+idUser);
+  }
 }

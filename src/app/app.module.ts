@@ -22,6 +22,7 @@ import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 import { registerLocaleData } from '@angular/common';
+import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { registerLocaleData } from '@angular/common';
     BuscaCategoriaComponent,
     BuscaNomeComponent,
     BuscaMarcaComponent,
-    EditarUsuarioComponent
+    EditarUsuarioComponent,
+    MeuspedidosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+<div class="container" *ngIf="listaPedidos.length>0">
+
+  <!-- <div *ngFor="let item of listaPedidos" class ="d-flex"> -->
+  <!-- <div class="foto">
+      <img src="{{item.produto.urlFotoProduto}}" alt="Foto Produto" height="128" width="128">
+    </div>
+    <div class="nome"><h2>{{item.nomeProduto}}</h2></div>
+    <div class="qtde"><h5>Qtde:{{item.qtdeProduto}}</h5></div>
+    <div class="datavenda"><h5>Data Venda:{{item.createdDateProduto}}</h5></div>
+    <div class="precoTotal"><h5>Total:{{item.total}}</h5></div> -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Foto </th>
+        <th scope="col">Nome</th>
+        <th scope="col">Qtde</th>
+        <th scope="col">Total</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listaPedidos">
+        <td scope="col"><img src="{{item.produto.urlFotoProduto}}" alt="Foto Produto" height="64" width="64"></td>
+        <td scope="col">{{item.nomeProduto}}</td>
+        <td scope="col">{{item.qtdeProduto}}</td>
+        <td scope="col">{{item.total | currency: 'BRL'}}</td>
+        <td scope="col">{{item.createdDateProduto | date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--
+</div> -->

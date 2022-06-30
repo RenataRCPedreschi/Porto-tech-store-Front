@@ -27,7 +27,7 @@ export class EditarProdutoComponent implements OnInit {
 
   atualizarProduto(produto: ProdutoModel) {
     this.produtoService.putProduto(produto).subscribe(resp => {
-
+      this.router.navigate(['/gerenciadorprodutos']);
     });
 
 

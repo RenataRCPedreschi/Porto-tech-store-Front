@@ -1,4 +1,4 @@
-import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -21,6 +21,8 @@ import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
 import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { registerLocaleData } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -52,8 +54,12 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
   providers: [
     
     
-  {provide: DEFAULT_CURRENCY_CODE,
+  {provide:DEFAULT_CURRENCY_CODE,
     useValue: 'BRL'}],
 bootstrap: [AppComponent]
 })
 export class AppModule { }
+function ptBr(ptBr: any) {
+  throw new Error('Function not implemented.');
+}
+

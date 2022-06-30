@@ -1,10 +1,40 @@
 .btn{
     background-color: #103574;
-    color: white;
+    color: #ffffff;
+
 }
 .estoqueSim{
   color:rgb(137, 228, 0);
 }
 .estoqueNao{
   color:#f50a0a;
+}
+
+.produtoDescricao{
+  width: 600px;
+ justify-content: center;
+ align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.linkEstilo a{
+text-decoration: none;
+color: #808080;
+
+}
+.produtoEstilo{
+  margin-top: 20px ;
+
+}
+
+.produtoValor{
+  height: 470px;
+
+}
+
+.botaoEstilo{
+  margin-top: 50px;
+
 }

@@ -25,7 +25,6 @@
     "ngx-order-pipe": "^2.2.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
-    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.4.19",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.4"

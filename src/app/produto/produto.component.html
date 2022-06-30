@@ -9,15 +9,15 @@
         <div class="row d-flex">
           <div class="card text-center ml-5 mr-5 card-tm">
 
-            <div class="card-body">
-              <h5 class="card-title text-center mt-5">{{produto.nomeProduto}}</h5>
+            <div class="card-body produtoDescricao linkEstilo">
+              <h5 class="card-title">{{produto.nomeProduto}}</h5>
 
               <img src={{produto.urlFotoProduto}} class="text-center img-fluid" alt="" height="300" width="300">
 
-              <div>
+              <div class="descricao">
                 {{produto.descricaoProduto}}
               </div>
-              <div>
+              <div class="produtoEstilo">
                 <a [routerLink]="['/busca/marca',produto.marcaProduto]">
                   Marca: {{produto.marcaProduto}}
                 </a>
@@ -46,7 +46,7 @@
 
             <div class="card text-center ml-5 mr-5">
 
-              <div class="card-body">
+              <div class="card-body produtoValor">
                 <div *ngIf = "emEstoque(); else naoestoque">
                   <small  class = "estoqueSim">Em estoque</small>
                 </div>
@@ -57,7 +57,8 @@
               <p class="fontmini">Comprando agora receba em até 3 dias úteis
                 </p>
 
-                <div>
+                <div class="botaoEstilo">
+                  <h1>{{produto.precoVendaProduto|currency}}</h1>
                   <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
                   <a class="btn mt-2" style="background-color: rgb(26, 26, 219);"
                     (click)="adicionarCarrinho(produto)">Adicionar

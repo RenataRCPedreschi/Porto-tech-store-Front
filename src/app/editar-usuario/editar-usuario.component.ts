@@ -38,6 +38,8 @@ export class EditarUsuarioComponent implements OnInit {
   }
 
   atualizarPessoa(){
-    this.auth.atualizar(this.usuario).subscribe(resp=>{});
+    this.auth.atualizar(this.usuario).subscribe(resp=>{
+    
+    });
   }
 }

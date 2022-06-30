@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { environment } from '../environments/environment';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../services/auth.service';
@@ -46,6 +47,8 @@ export class LoginComponent implements OnInit {
       }
       console.log(environment);
     });
+
+
 
   }
 }

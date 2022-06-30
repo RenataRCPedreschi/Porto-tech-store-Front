@@ -2,10 +2,12 @@
   display: grid;
   
 }
-.div{
-  border: 1px solid black;
-}
-
+/* .divFoto{
+  margin: 0 auto;
+} */
+/* .divDescricao{
+  
+} */
 .qtdeInput{
   width: 15%;
 }
@@ -31,8 +33,23 @@ icon-shape {
   border-bottom: #103574;
 }
 
-
+.preco{
+  margin-right: 20px;
+}
 
 .tm-max {
   max-height: 150px;
+}
+
+.btnRemover{
+  height: 40px;
+  border-radius: 10px;
+}
+.cardCarrinho{
+  margin-bottom: 24px;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
 }

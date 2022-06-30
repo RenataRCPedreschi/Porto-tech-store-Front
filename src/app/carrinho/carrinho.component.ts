@@ -5,6 +5,7 @@ import { ItemCarrinho } from './../model/ItemCarrinhoModel';
 import { Component, OnInit } from '@angular/core';
 import { carrinho } from '../environments/carrinho';
 import { UserModel } from '../model/UserModel';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-carrinho',
   templateUrl: './carrinho.component.html',
@@ -65,6 +66,14 @@ export class CarrinhoComponent implements OnInit {
     this.vendaService.ultimoIdCarrinho().subscribe((resp: VendaModel) => {
       if (resp != null) idCarrinho = resp.idCarrinho + 1;
       this.gerarVenda(idCarrinho);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Compra realizada com sucesso!',
+        text:'Obrigada por comprar na PortoTechStore',
+        showConfirmButton: false,
+        timer: 1500
+      })
     });
 
 

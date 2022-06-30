@@ -8,40 +8,51 @@
       <div class="card">
         <div class="d-flex justify-content-between card-header">
           <h5>Carrinho</h5>
-          <h5>Preço</h5>
+
         </div>
 
-        <div class="d-flex flex-column" *ngIf="carrinhoLocal.length>0">
+        <div class="d-flex flex-column " *ngIf="carrinhoLocal.length>0">
 
 
-          <div class="grid-container" *ngFor="let itemCarrinho of carrinhoLocal">
+          <div class="grid-container cardCarrinho" *ngFor="let itemCarrinho of carrinhoLocal">
 
-            <div class="foto div">
+            <div class="foto divFoto">
               <img src={{itemCarrinho.produto.urlFotoProduto}} alt="" height="256" width="256">
             </div>
 
 
-            <div class="info div">
+
+            <div class="info divDescricao">
               <p>{{itemCarrinho.produto.nomeProduto}}</p>
-              <p>{{itemCarrinho.produto.marcaProduto}}</p>
-              <p>{{itemCarrinho.produto.categoriaProduto}}</p>
-              <div>
-                <span>Qtde.</span>
-                <div class="d-flex justify-content-between align-items-center"></div>
-                <button class="border rounded-circle icon-sm mx-1" (click)="diminuirQtde(itemCarrinho)">-</button>
-                <input type="text" class="border-0 text-center qtdeInput" [(ngModel)]="itemCarrinho.qtde" min="1"
-                  onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" (change)="ngOnInit()"
-                  (keyup)="ngOnInit()">
-                <button class="border rounded-circle icon-sm mx-1" (click)="aumentarQtde(itemCarrinho)">+</button>
+              <!-- <p>{{itemCarrinho.produto.marcaProduto}}</p>
+              <p>{{itemCarrinho.produto.categoriaProduto}}</p> -->
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <p> Qtde.</p>
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                    <button class="border rounded-circle icon-sm mx-1" (click)="diminuirQtde(itemCarrinho)">-</button>
+                    <input type="text" class="border-0 text-center qtdeInput" [(ngModel)]="itemCarrinho.qtde" min="1"
+                      onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" (change)="ngOnInit()"
+                      (keyup)="ngOnInit()">
+                    <button class="border rounded-circle icon-sm mx-1" (click)="aumentarQtde(itemCarrinho)">+</button>
+                  </div>
+                  
+                </div>
+
+                <button class="btnRemover" (click)="removerItemCarrinho(itemCarrinho)">remover</button>
               </div>
 
-              <button (click)="removerItemCarrinho(itemCarrinho)">remover</button>
+              <div class="preco">
+                <p class="text-end">Valor Un.{{itemCarrinho.produto.precoVendaProduto |currency}}</p>
+                <p class="text-end">Subtotal {{itemCarrinho.subtotal | currency}}</p>
+              </div>
+
+
             </div>
 
-            <div class="preco">
-              <p class="text-end">Valor Un.{{itemCarrinho.produto.precoVendaProduto |currency}}</p>
-              <p class="text-end">Subtotal {{itemCarrinho.subtotal | currency}}</p>
-            </div>
+
+
           </div>
 
 
@@ -57,12 +68,12 @@
 
       <div class="card">
         <h3 class="card-header">Resumo</h3>
-        <div *ngIf="isLogado(); else naologado">
+        <div *ngIf="!isLogado(); else naologado">
           <div class="endereco-entrega">
             <h5>Endereço de entrega</h5>
             <p class="mx-2">{{endereco}}</p>
           </div>
-        <div class="forma-pagmento mx-3 mt-1">
+          <div class="forma-pagmento mx-3 mt-1">
             <h5>Forma de Pagamento</h5>
 
             <div class="form-check">
@@ -98,12 +109,12 @@
 
 
 
-          
+
 
           <div class="card-body">
             <h5 class="text-center">Total</h5>
             <hr>
-            <h5 class="text-center">R$ {{total}}</h5>
+            <h5 class="text-center">{{total | currency}}</h5>
           </div>
 
           <div class="d-flex justify-content-center mb-2">
@@ -112,11 +123,12 @@
         </div>
 
         <ng-template #naologado>
-          <div class = "p-4">Faça seu <a routerLink="/login">login</a> ou <a routerLink="/cadastrarusuario">cadastre-se</a> para finalizar a compra</div>
+          <div class="p-4">Faça seu <a routerLink="/login">login</a> ou <a
+              routerLink="/cadastrarusuario">cadastre-se</a> para finalizar a compra</div>
           <div class="card-body">
             <h5 class="text-center">Total</h5>
             <hr>
-            <h5 class="text-center">R$ {{total}}</h5>
+            <h5 class="text-center">R$ {{total | currency}}</h5>
           </div>
         </ng-template>
 

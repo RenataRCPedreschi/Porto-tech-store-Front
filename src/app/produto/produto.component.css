@@ -11,12 +11,13 @@
 }
 
 .produtoDescricao{
-  width: 600px;
- justify-content: center;
- align-items: center;
+  max-width: 600px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  
+  flex-direction:column;
+  margin: 0 auto;
 
 }
 .linkEstilo a{
@@ -26,15 +27,30 @@ color: #808080;
 }
 .produtoEstilo{
   margin-top: 20px ;
-
+  
 }
-
+.cardEstilo{
+  padding: 0 24px;
+  margin-bottom: 15px;
+}
 .produtoValor{
-  height: 470px;
+  height: 490px;
 
 }
 
 .botaoEstilo{
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.botaoEstilo h1{
+  color: #3fb4dc;
+}
 
+.botaoEstilo >h1{
+  margin-bottom: 50px;
+}
+
+.botaoEstilo a:nth-child(4){
+  margin-top: 15px;
 }

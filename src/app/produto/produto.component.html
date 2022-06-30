@@ -1,81 +1,80 @@
+<!-- exibição e descrição do produto -->
+<div class="container-fluid col-md-12 mt-5 d-flex justify-content-center"  id="img-bg">
 
-    <!-- exibição e descrição do produto -->
-  <div class="container-fluid col-md-12 mt-5 d-flex justify-content-center"
-    with="100%" height="100%" id="img-bg">
+  <div class="row">
 
-    <div class="row">
+    <div class="col-md-8 cardEstilo">
+      <div class="row d-flex">
+        <div class="card text-center ml-5 mr-5 card-tm">
 
-      <div class="col-md-8">
-        <div class="row d-flex">
-          <div class="card text-center ml-5 mr-5 card-tm">
+          <div class="card-body produtoDescricao linkEstilo">
 
-            <div class="card-body produtoDescricao linkEstilo">
-              <h5 class="card-title">{{produto.nomeProduto}}</h5>
 
-              <img src={{produto.urlFotoProduto}} class="text-center img-fluid" alt="" height="300" width="300">
+            <img src={{produto.urlFotoProduto}} class="text-center img-fluid" alt="" height="300" width="300">
 
-              <div class="descricao">
-                {{produto.descricaoProduto}}
-              </div>
-              <div class="produtoEstilo">
-                <a [routerLink]="['/busca/marca',produto.marcaProduto]">
-                  Marca: {{produto.marcaProduto}}
-                </a>
-              </div>
-              <div><a [routerLink]="['/busca/categoria' , produto.categoriaProduto]">
-                Categoria:{{produto.categoriaProduto}}
+            <div class="descricao">
+              {{produto.descricaoProduto}}
+            </div>
+            <div class="produtoEstilo">
+              <a [routerLink]="['/busca/marca',produto.marcaProduto]">
+                Marca: {{produto.marcaProduto}}
               </a>
-              </div>
-
-              <p class="justify"></p>
             </div>
-          </div>
-        </div>
-        <small class="mt-5 fontmini">Esse produto é vendido e entregue
-          por <b>PortoTech Store</b>.
-        </small>
-
-      </div>
-
-
-
-      <div class="col-md-4">
-
-        <div class="row d-flex mr-10">
-          <div class=" text-center">
-
-            <div class="card text-center ml-5 mr-5">
-
-              <div class="card-body produtoValor">
-                <div *ngIf = "emEstoque(); else naoestoque">
-                  <small  class = "estoqueSim">Em estoque</small>
-                </div>
-                <ng-template #naoestoque>
-                  <small class = "estoqueNao text-start">Sem estoque</small>
-                </ng-template>
-                <div></div>
-              <p class="fontmini">Comprando agora receba em até 3 dias úteis
-                </p>
-
-                <div class="botaoEstilo">
-                  <h1>{{produto.precoVendaProduto|currency}}</h1>
-                  <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
-                  <a class="btn mt-2" style="background-color: rgb(26, 26, 219);"
-                    (click)="adicionarCarrinho(produto)">Adicionar
-                    ao carrinho</a>
-                </div>
-
-              </div>
-
-
+            <div><a [routerLink]="['/busca/categoria' , produto.categoriaProduto]">
+                Categoria: {{produto.categoriaProduto}}
+              </a>
             </div>
 
+            <p class="justify"></p>
           </div>
         </div>
       </div>
     </div>
 
+
+
+    <div class="col-md-4">
+
+      <div class="row d-flex mr-10">
+        <div class=" text-center">
+
+          <div class="card text-center ml-5 mr-5">
+
+            <div class="card-body produtoValor">
+              <h5 class="card-title">{{produto.nomeProduto}}</h5>
+              <div *ngIf="emEstoque(); else naoestoque">
+                <small class="estoqueSim">Em estoque</small>
+              </div>
+              <img class="imgStar" src="https://i.imgur.com/lqQP21r.png" alt="">
+              <div>
+                <small class="portoEntrega">Esse produto é vendido e entregue
+                  por <b>PortoTech Store</b>.
+                </small>
+              </div>
+
+              <ng-template #naoestoque>
+                <small class="estoqueNao text-start">Sem estoque</small>
+              </ng-template>
+              <div></div>
+
+
+              <div class="botaoEstilo">
+                <h1>{{produto.precoVendaProduto|currency}}</h1>
+                <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
+                <a class="btn mt-2" style="background-color: rgb(26, 26, 219);"
+                  (click)="adicionarCarrinho(produto)">Adicionar
+                  ao carrinho</a>
+                <a routerLink="/inicio">Voltar para página inicial</a>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
-
-
+</div>

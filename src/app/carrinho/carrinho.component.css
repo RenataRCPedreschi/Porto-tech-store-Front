@@ -4,9 +4,9 @@
 }
 
 
-.qtdeInput{
-  width: 15%;
-}
+/* .qtdeInput{
+  width: ;
+} */
 
 /* icon-shape {
   display: inline-flex;
@@ -44,12 +44,13 @@
 .excluir{
   width: 32px;
   height: 32px;
-
 }
 
 .tm-max {
   max-height: 150px;
 }
+
+
 .qtdText{
   width: fit-content;
 }
@@ -63,12 +64,13 @@
   border: none;
   border-radius: 50%;
   margin-right: 10px;
+  cursor: pointer;
   
 }
 .btnRemover img{
-  width: 30px;
-  height: 30px;
- 
+  width: 25px;
+  height: 25px;
+  margin-top: -20px !important;
 }
 .cardCarrinho{
   margin-bottom: 0px;
@@ -98,6 +100,7 @@
 }
 .card{
   width: fit-content !important;
+  height: fit-content !important;
   
 }
 .endereco-entrega{
@@ -105,33 +108,68 @@
 }
 
 
+
+
+
+
 .produto{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 300px;
+  margin: 0 auto;
 }
+
+
 .descricao{
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 150px;
+  /* justify-content: center; */
+  width: 180px;
+  margin: 0 auto;
+ 
+ 
 }
 .preco{
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100px;
+  /* justify-content: center; */
+  width: 130px;
+  margin: 0 auto;
+  
 }
+.preco p{
+  padding-left: 10px;
+}
+
+
 .quantidade{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
+  margin: 0 auto;
+}
+.quantidade>div{
+  border: 1px solid rgba(150, 148, 148, 0.74);
+  border-radius: 10px;
+  width: 100px;
+  margin-left: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20px !important;
+}
+.btnQuantidade{
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
 }
 .total{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 150px;
+  margin: 0 auto;
 }

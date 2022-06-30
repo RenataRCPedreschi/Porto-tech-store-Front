@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
 
         this.router.navigate(['/inicio']);
       }
-      /* localStorage.setItem("jwt", environment.token); */
+    
       console.log(environment);
     });
     if (this.isCamposNotNull()) {

@@ -4,7 +4,7 @@
 
 
 
-  <div class="col-md-8 card">
+  <div class="col-md-8 card ">
 
     <div class="d-flex justify-content-between card-header">
       <div class="produto">
@@ -41,11 +41,13 @@
           <p class="text-end">{{"R$ "+itemCarrinho.produto.precoVendaProduto.toFixed(2).replace(".",",")}}</p>
         </div>
 
-        <div class="d-flex justify-content-between align-items-center quantidade">
-          <button class="border rounded-circle icon-sm mx-1" (click)="diminuirQtde(itemCarrinho)">-</button>
-          <input type="text" class="border-0 text-center qtdeInput" [(ngModel)]="itemCarrinho.qtde" min="1"
-            onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" (change)="ngOnInit()" (keyup)="ngOnInit()">
-          <button class="border rounded-circle icon-sm mx-1" (click)="aumentarQtde(itemCarrinho)">+</button>
+        <div class="quantidade">
+          <div>
+            <a class="btnQuantidade" (click)="diminuirQtde(itemCarrinho)">-</a>
+            <input type="text" class="border-0 text-center qtdeInput" size="3"[(ngModel)]="itemCarrinho.qtde" min="1"
+              onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" (change)="ngOnInit()" (keyup)="ngOnInit()">
+            <a class="btnQuantidade" (click)="aumentarQtde(itemCarrinho)">+</a>
+          </div>
         </div>
 
         <div class="total">
@@ -53,7 +55,7 @@
         </div>
 
         <div>
-          <button class="btnRemover" (click)="removerItemCarrinho(itemCarrinho)"> <img class= "excluir" src="../../assets/img/excluir.png" alt="lixeira"> </button>
+          <a class="btnRemover" (click)="removerItemCarrinho(itemCarrinho)"> <img class= "excluir" src="../../assets/img/excluir.png" alt="lixeira"> </a>
         </div>
 
 

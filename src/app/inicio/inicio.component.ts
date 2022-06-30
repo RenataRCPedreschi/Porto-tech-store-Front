@@ -12,9 +12,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-
+  
   public listaProdutos: ProdutoModel[] = [];
   constructor(private router: Router, private produtoService: ProdutoService) { } //private cabecalho: CabecalhoComponent) { }
+
+  
 
   ngOnInit(): void {
 
@@ -29,7 +31,7 @@ export class InicioComponent implements OnInit {
       console.log(item.produto);
       if (produto.idProduto == item.produto.idProduto) {
         Swal.fire({
-          position: 'top-end',
+          position: 'center',
           icon: 'success',
           title: 'Produto Adicionado ao Carrinho',
           showConfirmButton: false,
@@ -44,7 +46,7 @@ export class InicioComponent implements OnInit {
     itemCarrinho.qtde = 1;
     carrinho.push(itemCarrinho);
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
       title: 'Produto Adicionado ao Carrinho',
       showConfirmButton: false,

@@ -2,24 +2,24 @@
   display: grid;
   
 }
-/* .divFoto{
-  margin: 0 auto;
-} */
-/* .divDescricao{
-  
-} */
+
+
 .qtdeInput{
   width: 15%;
 }
 
-icon-shape {
+/* icon-shape {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   vertical-align: middle;
-}
+} */
 
+.paizao{
+  display: flex;
+  gap: 20px;
+}
 .icon-sm {
   width: 2rem;
   height: 2rem;
@@ -31,25 +31,107 @@ icon-shape {
   color: #ffffff ;
   background-color: #103574;
   border-bottom: #103574;
+  margin-bottom: 10px;
+  
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    background-color: #1883ad;
+
 }
 
-.preco{
-  margin-right: 20px;
+.excluir{
+  width: 32px;
+  height: 32px;
+
 }
 
 .tm-max {
   max-height: 150px;
 }
-
+.qtdText{
+  width: fit-content;
+}
+.qtdCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .btnRemover{
-  height: 40px;
-  border-radius: 10px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+  
+}
+.btnRemover img{
+  width: 30px;
+  height: 30px;
+ 
 }
 .cardCarrinho{
-  margin-bottom: 24px;
-  border: 1px solid black;
-  border-radius: 10px;
-
+  margin-bottom: 0px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  flex-direction: row !important;
+}
+
+.divDescricao{
+  /* margin-top: 12px; */
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+
+
+.card-header {
+  /* width: fit-content !important; */
+  background-color: #dbe2f0;
+  text-align: center;
+
+}
+.card{
+  width: fit-content !important;
+  
+}
+.endereco-entrega{
+  text-align: center;
+}
+
+
+.produto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+.descricao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+.preco{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+.quantidade{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+.total{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
 }

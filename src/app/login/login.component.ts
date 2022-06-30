@@ -17,11 +17,42 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
+
+
+/* if(localStorage.getItem("jwt") != null){
+  this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
+
+    this.userLogin = resp;
+    console.log(this.userLogin);
+    environment.id = this.userLogin.id;
+    environment.nome = this.userLogin.nome;
+    environment.username = this.userLogin.username;
+    environment.token = this.userLogin.token;
+    environment.isAdmin = this.userLogin.isAdmin;
+    environment.endereco += this.userLogin.endereco + ',';
+    environment.endereco += this.userLogin.numero + ' ';
+    environment.endereco += this.userLogin.complemento + ' ';
+    environment.endereco += this.userLogin.bairro + ' - ';
+    environment.endereco += this.userLogin.cidade + ', ';
+    environment.endereco += this.userLogin.estado + ' - ';
+    environment.endereco += this.userLogin.cep;
+
+  });
+
+
+
+} */
+
+}
+
+
   isLogado(): boolean {
     return environment.token != '';
   }
+
   entrar() {
+
+
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
 
       this.userLogin = resp;
@@ -45,6 +76,7 @@ export class LoginComponent implements OnInit {
 
         this.router.navigate(['/inicio']);
       }
+      /* localStorage.setItem("jwt", environment.token); */
       console.log(environment);
     });
 

@@ -21,8 +21,12 @@ import { BuscaNomeComponent } from './busca-nome/busca-nome.component';
 import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
-import { registerLocaleData } from '@angular/common';
 import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
+
+
+
+
+
 
 
 @NgModule({
@@ -61,7 +65,7 @@ import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
 bootstrap: [AppComponent]
 })
 export class AppModule { }
-function ptBr(ptBr: any) {
-  throw new Error('Function not implemented.');
-}
+
+
+
 

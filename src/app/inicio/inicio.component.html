@@ -58,7 +58,7 @@
 
           <div class="d-flex flex-column">
             <a class="a-card" [routerLink]="['/produto',produto.idProduto]">
-              <p class="preco">{{produto.precoVendaProduto | currency}}</p>
+              <p class="preco">{{"R$ "+produto.precoVendaProduto.toFixed(2).replace(".",",")}}</p>
             </a>
             <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
             <a class="btn mt-2" style="background-color: rgb(26, 26, 219);"

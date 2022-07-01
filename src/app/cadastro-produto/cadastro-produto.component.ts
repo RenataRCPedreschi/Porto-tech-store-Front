@@ -3,6 +3,7 @@ import { ProdutoModel } from './../model/ProdutoModel';
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastro-produto',
@@ -21,6 +22,14 @@ export class CadastroProdutoComponent implements OnInit {
     this.produtoService.criarNovoProduto(this.produto).subscribe(resp=>{
       console.log("resposta"+resp);
       this.router.navigate(['/gerenciadorprodutos']);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Produto cadastrado com sucesso!!!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+
     });
   }
 

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProdutoModel } from '../model/ProdutoModel';
 import { environment } from '../environments/environment';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-gerenciar-produtos',
@@ -29,6 +30,14 @@ export class GerenciarProdutosComponent implements OnInit {
     this.produtoService.deleteProduto(Number(id)).subscribe(resp=>{
 
       this.ngOnInit();
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Produto excluído!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+
     });
   }
 

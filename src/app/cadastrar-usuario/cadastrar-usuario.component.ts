@@ -58,7 +58,7 @@ export class CadastrarUsuarioComponent implements OnInit {
             position: 'center',
             icon: 'success',
             title: 'Cadastrado com sucesso!',
-            text: 'Obrigada por comprar na PortoTechStore',
+            text: 'Obrigada pelo cadastro na PortoTechStore',
             showConfirmButton: false,
             timer: 1500
 

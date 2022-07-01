@@ -13,65 +13,75 @@ import Swal from 'sweetalert2';
 })
 export class CadastrarUsuarioComponent implements OnInit {
 
-  newUser : UserModel = new UserModel();
+  newUser: UserModel = new UserModel();
 
-  constructor(private viacepService : ViaCEPService , private auth: AuthService,private router:Router) { }
+  constructor(private viacepService: ViaCEPService, private auth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  isCamposNotNull(){
-    return this.newUser.username!='' &&this.newUser.password !=''&& this.newUser.nome !='' && this.newUser.cpf != '' &&
-    this.newUser.celular != '' && this.newUser.cep != '' && this.newUser.endereco !='' && this.newUser.numero &&
-    this.newUser.bairro!= '' && this.newUser.cidade != '' && this.newUser.estado!='';
+  isCamposNotNull() {
+    return this.newUser.username != '' && this.newUser.password != '' && this.newUser.nome != '' && this.newUser.cpf != '' &&
+      this.newUser.celular != '' && this.newUser.cep != '' && this.newUser.endereco != '' && this.newUser.numero &&
+      this.newUser.bairro != '' && this.newUser.cidade != '' && this.newUser.estado != '';
   }
 
 
-  buscarEndereco(cep:any){
-    this.viacepService.buscarCEP(cep.value).subscribe((resposta)=>{
+  buscarEndereco(cep: any) {
+    this.viacepService.buscarCEP(cep.value).subscribe((resposta) => {
       this.prencherEndereco(resposta);
     })
   }
 
-  prencherEndereco(enderecoModel: any){
+  prencherEndereco(enderecoModel: any) {
     this.newUser.endereco = enderecoModel.logradouro;
     this.newUser.bairro = enderecoModel.bairro;
     this.newUser.cidade = enderecoModel.localidade;
     this.newUser.estado = enderecoModel.uf;
   }
 
-  cadastrarPessoa(){
-    if(this.isCamposNotNull()){
-      this.newUser.isAdmin=false;
-      console.log(this.newUser);
-      this.auth.cadastrar(this.newUser).subscribe(resp=>{
+  cadastrarPessoa() {
+    if (this.isCamposNotNull()) {
+      this.newUser.isAdmin = false;
+      this.auth.cadastrar(this.newUser).subscribe(resp => {
+        console.log("resposta abaixo")
         console.log(resp);
-        Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Usuário cadastrado com sucesso!',
-          showConfirmButton: false,
-          timer: 1500
 
-      });
-      this.router.navigate(['/login']);
+        if (resp == null) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Usuário já cadastrado',
+            text: 'Por favor, faça seu login!',
+          })
+        } else {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Cadastrado com sucesso!',
+            text: 'Obrigada por comprar na PortoTechStore',
+            showConfirmButton: false,
+            timer: 1500
 
-    },erro=>{console.log(erro)});
+          });
+          this.router.navigate(['/login']);
+        }
+
+      }, erro => { console.log("erro:" + erro) });
+    }
+
   }
 
+  isLogado(): boolean {
+    return environment.token != '';
   }
 
-  isLogado():boolean{
-    return environment.token !='';
-  }
-
-  verSenha(){
+  verSenha() {
     const inputSenha = document.querySelector('#inputSenha') as HTMLInputElement;
     console.log(inputSenha);
-    if(inputSenha.type === "password"){
+    if (inputSenha.type === "password") {
       inputSenha.type = "text";
-    }else{
-      inputSenha.type ="password";
+    } else {
+      inputSenha.type = "password";
     }
   }
 }

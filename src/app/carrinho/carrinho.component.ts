@@ -16,8 +16,8 @@ export class CarrinhoComponent implements OnInit {
   public carrinhoLocal = carrinho;
   public total: number = 0;
   public endereco = environment.endereco;
-  public metodoPagamento:string = '';
-  constructor(private vendaService: VendaService,private router: Router) { }
+  public metodoPagamento: string = '';
+  constructor(private vendaService: VendaService, private router: Router) { }
 
   ngOnInit(): void {
     this.calcularSubtotal();
@@ -57,28 +57,26 @@ export class CarrinhoComponent implements OnInit {
       this.ngOnInit();
     }
   }
-  receberPagamento(pagamento:string){
+  receberPagamento(pagamento: string) {
     console.log(pagamento);
     this.metodoPagamento = pagamento;
   }
   finalizarCompra() {
     let idCarrinho = 0;
-    if(this.metodoPagamento=="" || this.metodoPagamento == undefined || this.metodoPagamento == null){
+    if (this.metodoPagamento == "" || this.metodoPagamento == undefined || this.metodoPagamento == null) {
       const existevalidapagto = document.querySelector("#validapagto")
-    if(existevalidapagto != undefined || existevalidapagto != null){
-      existevalidapagto.parentNode?.removeChild(existevalidapagto)
-    }
+      if (existevalidapagto != undefined || existevalidapagto != null) {
+        existevalidapagto.parentNode?.removeChild(existevalidapagto)
+      }
 
       const selecionepagto = document.querySelector(".selecionepagto")
-      const p=document.createElement('p')
-      p.textContent="Selecione o método de pagamento"
+      const p = document.createElement('p')
+      p.textContent = "Selecione o método de pagamento"
       p.setAttribute("id", "validapagto")
       selecionepagto?.appendChild(p)
       console.log(selecionepagto)
       return;
     }
-
-
     this.vendaService.ultimoIdCarrinho().subscribe((resp: VendaModel) => {
       if (resp != null) idCarrinho = resp.idCarrinho + 1;
       this.gerarVenda(idCarrinho);
@@ -86,7 +84,7 @@ export class CarrinhoComponent implements OnInit {
         position: 'center',
         icon: 'success',
         title: 'Compra realizada com sucesso!',
-        text:'Obrigada por comprar na PortoTechStore',
+        text: 'Obrigada por comprar na PortoTechStore',
         showConfirmButton: false,
         timer: 1500
       });
@@ -94,10 +92,7 @@ export class CarrinhoComponent implements OnInit {
 
     });
 
-
-
   }
-
   gerarVenda(idCarrinho: number) {
 
     for (let item of this.carrinhoLocal) {
@@ -113,11 +108,11 @@ export class CarrinhoComponent implements OnInit {
         console.log(resp);
       });
     }
-    carrinho.splice(0,carrinho.length);
+    carrinho.splice(0, carrinho.length);
     this.router.navigate(['/inicio']);
   }
 
-  isLogado(){
+  isLogado() {
     return environment.token != '';
   }
 }

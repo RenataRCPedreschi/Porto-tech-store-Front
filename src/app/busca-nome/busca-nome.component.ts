@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { carrinho } from '../environments/carrinho';
 import { ItemCarrinho } from '../model/ItemCarrinhoModel';
 import { ProdutoModel } from '../model/ProdutoModel';
@@ -30,6 +31,13 @@ export class BuscaNomeComponent implements OnInit {
     itemCarrinho.produto = produto;
     itemCarrinho.qtde = 1;
     carrinho.push(itemCarrinho);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Produto Adicionado ao Carrinho',
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   exibirCarrossel(): Boolean {

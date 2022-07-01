@@ -61,7 +61,7 @@
 
 
               <div class="botaoEstilo">
-                <h1>{{produto.precoVendaProduto|currency}}</h1>
+                <h1>{{produto.precoVendaProduto | currency}}</h1>
                 <a class="btn" (click)="adicionarCarrinho(produto)" routerLink="/carrinho">COMPRAR</a>
                 <a class="btn mt-2" style="background-color: rgb(26, 26, 219);"
                   (click)="adicionarCarrinho(produto)">Adicionar

@@ -68,7 +68,7 @@ export class CarrinhoComponent implements OnInit {
     if(existevalidapagto != undefined || existevalidapagto != null){
       existevalidapagto.parentNode?.removeChild(existevalidapagto)
     }
-    
+
       const selecionepagto = document.querySelector(".selecionepagto")
       const p=document.createElement('p')
       p.textContent="Selecione o método de pagamento"
@@ -90,7 +90,7 @@ export class CarrinhoComponent implements OnInit {
         showConfirmButton: false,
         timer: 1500
       });
-      this.router.navigate(['/meuspedidos']);
+
 
     });
 
@@ -113,6 +113,8 @@ export class CarrinhoComponent implements OnInit {
         console.log(resp);
       });
     }
+    carrinho.splice(0,carrinho.length);
+    this.router.navigate(['/meuspedidos']);
   }
 
   isLogado(){

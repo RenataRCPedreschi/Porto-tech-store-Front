@@ -35,6 +35,21 @@ export class BuscaCategoriaComponent implements OnInit {
   }
 
   adicionarCarrinho(produto: ProdutoModel) {
+    for (let item of carrinho) {
+      console.log(produto);
+      console.log(item.produto);
+      if (produto.idProduto == item.produto.idProduto) {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Produto Adicionado ao Carrinho',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        item.qtde++;
+        return;
+      }
+    }
     const itemCarrinho: ItemCarrinho = new ItemCarrinho();
     itemCarrinho.produto = produto;
     itemCarrinho.qtde = 1;
@@ -46,6 +61,7 @@ export class BuscaCategoriaComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     });
+
   }
 
   exibirCarrossel(): Boolean {

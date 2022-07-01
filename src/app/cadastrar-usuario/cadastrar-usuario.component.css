@@ -1,5 +1,5 @@
 .btn{
-background-color: #103574; 
+background-color: #103574;
 color: #ffffff;
 margin: 16px;
 }
@@ -20,3 +20,6 @@ display: block;
 margin-left: auto;
 margin-right: auto }
 
+.campoInvalido{
+  border:1px solid red;
+}

@@ -17,8 +17,15 @@ export class CadastrarUsuarioComponent implements OnInit {
   constructor(private viacepService : ViaCEPService , private auth: AuthService,private router:Router) { }
 
   ngOnInit(): void {
-
   }
+
+  isCamposNotNull(){
+    return this.newUser.username!='' &&this.newUser.password !=''&& this.newUser.nome !='' && this.newUser.cpf != '' &&
+    this.newUser.celular != '' && this.newUser.cep != '' && this.newUser.endereco !='' && this.newUser.numero &&
+    this.newUser.bairro!= '' && this.newUser.cidade != '' && this.newUser.estado!='';
+  }
+
+
   buscarEndereco(cep:any){
     this.viacepService.buscarCEP(cep.value).subscribe((resposta)=>{
       this.prencherEndereco(resposta);
@@ -33,12 +40,17 @@ export class CadastrarUsuarioComponent implements OnInit {
   }
 
   cadastrarPessoa(){
-    this.newUser.isAdmin=false;
-    console.log(this.newUser);
-    this.auth.cadastrar(this.newUser).subscribe(resp=>{
-      console.log(resp);
-      this.router.navigate(['/login']);
-    })
+    if(this.isCamposNotNull()){
+      this.newUser.isAdmin=false;
+      console.log(this.newUser);
+      this.auth.cadastrar(this.newUser).subscribe(resp=>{
+        console.log(resp);
+        this.router.navigate(['/login']);
+      });
+
+    }else{
+      console.log('preencha todos os cmpos');
+    }
 
   }
 

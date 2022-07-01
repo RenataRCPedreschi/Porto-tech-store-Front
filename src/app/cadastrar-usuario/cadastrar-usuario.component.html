@@ -10,15 +10,15 @@
 
     <div class="mb-3 form-group w-50">
       <label class="form-label" for="password">Sua senha</label>
-      <input type="text" class="form-control" name="password" [(ngModel)]="newUser.password" placeholder="Digite sua senha" />
+      <input type="text" class="form-control email" name="password" [(ngModel)]="newUser.password" placeholder="Digite sua senha" />
     </div>
     <div class="mb-3 form-group w-50">
       <label class="form-label" for="nome">Nome</label>
       <input type="text" class="form-control" name="nome" [(ngModel)]="newUser.nome" placeholder="Digite seu nome" />
     </div>
     <div class="mb-3 form-group w-50">
-      <label class="form-label">CPF</label>
-      <input type="text" class="form-control" name="CPF" [(ngModel)]="newUser.cpf" placeholder="Digite seu CPF"  />
+      <label class="form-label">CPF (Sem pontos)</label>
+      <input type="text" class="form-control" name="CPF" [(ngModel)]="newUser.cpf" placeholder="Digite seu CPF" maxlength="11" />
     </div>
 
     <div class="mb-3 form-group w-50">

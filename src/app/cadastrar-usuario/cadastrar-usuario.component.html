@@ -4,43 +4,43 @@
     <h1 class="text-center">Faça seu Cadastro</h1>
 
     <div class="mb-3 form-group w-50">
-      <label class="form-label">E-mail (login)</label>
-      <input type="email" class="form-control" name="email"[(ngModel)]="newUser.username" placeholder="Digite seu email" />
+      <label class="form-label">E-mail* <small>(login)</small></label>
+      <input type="email" class="form-control" name="email"[(ngModel)]="newUser.username" placeholder="Digite seu email"  id = "inputEmail" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
 
     <div class="mb-3 form-group w-50">
-      <label class="form-label" for="password" >Sua senha</label>
-      <input id = "inputSenha" type="password" class="form-control email" name="password" [(ngModel)]="newUser.password" placeholder="Digite sua senha" />
+      <label class="form-label" for="password" >Sua senha* <small>(Mínimo 8 Caracteres)</small></label>
+      <input id = "inputSenha" type="password" class="form-control email" name="password" [(ngModel)]="newUser.password" placeholder="Digite sua senha" (blur) = "verificaVazioBlur($event.target)"/>
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"(click)=verSenha()>
         <label class="form-check-label" for="flexSwitchCheckDefault">Visualizar senha</label>
       </div>
     </div>
     <div class="mb-3 form-group w-50">
-      <label class="form-label" for="nome">Nome</label>
-      <input type="text" class="form-control" name="nome" [(ngModel)]="newUser.nome" placeholder="Digite seu nome" />
+      <label class="form-label" for="nome">Nome*</label>
+      <input id = "inputNome" type="text" class="form-control" name="nome" [(ngModel)]="newUser.nome" placeholder="Digite seu nome" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
     <div class="mb-3 form-group w-50">
-      <label class="form-label">CPF (Sem pontos)</label>
-      <input type="text" class="form-control" name="CPF" [(ngModel)]="newUser.cpf" placeholder="Digite seu CPF" maxlength="11" />
-    </div>
-
-    <div class="mb-3 form-group w-50">
-      <label class="form-label">Celular</label>
-      <input type="text" class="form-control" name="celular" [(ngModel)] = "newUser.celular" placeholder="Digite seu celular" />
-    </div>
-    <div class="mb-3 form-group w-50">
-      <label class="form-label">CEP</label>
-      <input type="text" class="form-control" name="cep" #cep (blur)="buscarEndereco(cep)" [(ngModel)]="newUser.cep" placeholder="Digite seu CEP"  />
+      <label class="form-label">CPF* <small>(Sem pontos)</small></label>
+      <input id = "inputCPF"type="text" class="form-control" name="CPF" [(ngModel)]="newUser.cpf" placeholder="Digite seu CPF" maxlength="11" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
 
     <div class="mb-3 form-group w-50">
-      <label class="form-label">Endereço</label>
-      <input type="text" class="form-control" name="endereço" [(ngModel)]="newUser.endereco" placeholder="Digite seu endereço" />
+      <label class="form-label">Celular*</label>
+      <input id = "inputCelular" type="text" class="form-control" name="celular" [(ngModel)] = "newUser.celular" placeholder="Digite seu celular" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
     <div class="mb-3 form-group w-50">
-      <label class="form-label">Número</label>
-      <input type="text" class="form-control" name="numero" [(ngModel)]="newUser.numero"/>
+      <label class="form-label">CEP* <small>(Digite para fazer a busca)</small></label>
+      <input id = "inputCEP" type="text" class="form-control" name="cep" #cep (blur)="buscarEndereco(cep)" [(ngModel)]="newUser.cep" placeholder="Digite seu CEP" maxlength="8"(blur) = "verificaVazioBlur($event.target)" />
+    </div>
+
+    <div class="mb-3 form-group w-50">
+      <label class="form-label">Endereço*</label>
+      <input id = "inputEndereco" type="text" class="form-control" name="endereço" [(ngModel)]="newUser.endereco" placeholder="Digite seu endereço"(blur) = "verificaVazioBlur($event.target)" />
+    </div>
+    <div class="mb-3 form-group w-50">
+      <label class="form-label">Número*</label>
+      <input id = "inputNumero" type="text" class="form-control" name="numero" [(ngModel)]="newUser.numero" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
     <div class="mb-3 form-group w-50">
       <label class="form-label">Complemento</label>
@@ -49,18 +49,18 @@
 
 
     <div class="mb-3 form-group w-50">
-      <label class="form-label">Bairro</label>
-      <input type="text" class="form-control" name="bairro" [(ngModel)]="newUser.bairro" placeholder="Digite seu bairro" />
+      <label class="form-label">Bairro*</label>
+      <input id = "inputBairro" type="text" class="form-control" name="bairro" [(ngModel)]="newUser.bairro" placeholder="Digite seu bairro" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
     <div class="mb-3 form-group w-50">
-      <label class="form-label">Cidade</label>
-      <input type="text" class="form-control" name="cidade" [(ngModel)]="newUser.cidade" placeholder="Digite sua cidade"  />
+      <label class="form-label">Cidade*</label>
+      <input id = "inputCidade" type="text" class="form-control" name="cidade" [(ngModel)]="newUser.cidade" placeholder="Digite sua cidade"  (blur) = "verificaVazioBlur($event.target)"/>
     </div>
 
     <div class="mb-3 form-group w-50">
-      <label for="estado">Estado</label>
-      <select class="form-select" name="estado"[(ngModel)]="newUser.estado">
-        <option selected>Selecione um estado</option>
+      <label for="estado">Estado*</label>
+      <select id = "inputEstado" class="form-select" name="estado"[(ngModel)]="newUser.estado" (blur) = "verificaVazioBlurSelected($event.target)">
+        <option selected>Selecione um estado*</option>
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>

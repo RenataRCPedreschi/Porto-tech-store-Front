@@ -67,6 +67,13 @@ export class CadastrarUsuarioComponent implements OnInit {
         }
 
       }, erro => { console.log("erro:" + erro) });
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Há campos obrigatórios vazios',
+        text: 'Por favor, preencha todos os campos obrigatórios',
+      })
+      this.camposVazios();
     }
 
   }
@@ -74,7 +81,51 @@ export class CadastrarUsuarioComponent implements OnInit {
   isLogado(): boolean {
     return environment.token != '';
   }
+  camposVazios(){
+    //const inputs = document.querySelectorAll('input'); Da para fazer a mesma coisa com loop
 
+
+    const $inputEmail = document.querySelector('#inputEmail');
+    const $inputNome = document.querySelector('#inputNome');
+    const $inputSenha = document.querySelector('#inputSenha');
+    const $inputCPF = document.querySelector('#inputCPF');
+    const $inputCelular = document.querySelector('#inputCelular');
+    const $inputCEP = document.querySelector('#inputCEP');
+    const $inputEndereco= document.querySelector('#inputEndereco');
+    const $inputNumero= document.querySelector('#inputNumero');
+    const $inputBairro= document.querySelector('#inputBairro');
+    const $inputCidade= document.querySelector('#inputCidade');
+    const $selectEstado= document.querySelector('#inputEstado');
+
+    const AllInputArray = [$inputEmail,$inputNome,$inputSenha,$inputCPF,$inputCelular,
+      $inputCEP,$inputEndereco,$inputNumero,$inputBairro,$inputCidade];
+
+    for(let input of AllInputArray){
+      if((input as HTMLInputElement).value == ''){
+        input?.classList.add('campoInvalido')
+      } else{
+        input?.classList.remove('campoInvalido');
+      }
+    }
+
+    if(($selectEstado as HTMLSelectElement).selectedIndex == -1){
+      $selectEstado?.classList.add('campoInvalido')
+    }else{
+      $selectEstado?.classList.remove('campoInvalido')
+    }
+
+  }
+  verificaVazioBlur(input:any){
+    if((input as HTMLInputElement).value != ''){
+      (input as HTMLInputElement).classList.remove('campoInvalido');
+    }
+
+  }
+  verificaVazioBlurSelected(input:any){
+    if((input as HTMLSelectElement).selectedIndex != -1){
+      (input as HTMLSelectElement).classList.remove('campoInvalido');
+    }
+  }
   verSenha() {
     const inputSenha = document.querySelector('#inputSenha') as HTMLInputElement;
     console.log(inputSenha);

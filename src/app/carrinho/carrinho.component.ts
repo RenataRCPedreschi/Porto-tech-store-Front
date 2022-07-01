@@ -64,9 +64,15 @@ export class CarrinhoComponent implements OnInit {
   finalizarCompra() {
     let idCarrinho = 0;
     if(this.metodoPagamento=="" || this.metodoPagamento == undefined || this.metodoPagamento == null){
+      const existevalidapagto = document.querySelector("#validapagto")
+    if(existevalidapagto != undefined || existevalidapagto != null){
+      existevalidapagto.parentNode?.removeChild(existevalidapagto)
+    }
+    
       const selecionepagto = document.querySelector(".selecionepagto")
       const p=document.createElement("p")
       p.textContent="Selecione o método de pagamento"
+      p.setAttribute("id", "validapagto")
       selecionepagto?.appendChild(p)
       console.log(selecionepagto)
       return;

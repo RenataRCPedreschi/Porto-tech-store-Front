@@ -43,12 +43,23 @@
 
       <nav >
         <ul class="listaStyle">
-          <li class="userImg flex-wrap" *ngIf="isNotLogado(); else logado">
-            <a routerLink="login">
-              <img src="../../assets/img/userlogin.png" alt="login">
-              Entre/Cadastre-se
-            </a>
-          </li>
+          <div class="d-flex" *ngIf="isNotLogado(); else logado"> 
+            <li class="userImg flex-wrap">
+              <a routerLink="login">
+                <img src="../../assets/img/userlogin.png" alt="login">
+                Entre/Cadastre-se
+              </a>
+            </li>
+            
+            <li class="carrinhoImg">
+              <a routerLink="carrinho">
+                <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
+                Meu carrinho
+                <span></span>
+              </a>
+            </li>
+          </div>
+
           <ng-template #logado>
             <li class="userImg">
               <a [routerLink]="['/usuario/editar',idUsuario]">
@@ -64,20 +75,20 @@
             </li>
 
             <li class="carrinhoImg">
+              <a routerLink="carrinho">
+                <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
+                Meu carrinho
+                <span></span>
+              </a>
+            </li>
+
+            <li class="carrinhoImg">
               <a (click)="sair()" routerLink="">
                 <img src="../../assets/img/sair.png" alt="sair">
                 Sair
               </a>
             </li>
           </ng-template>
-
-          <li class="carrinhoImg">
-            <a routerLink="carrinho">
-              <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
-              Meu carrinho
-              <span></span>
-            </a>
-          </li>
         </ul>
       </nav>
     </ng-template>

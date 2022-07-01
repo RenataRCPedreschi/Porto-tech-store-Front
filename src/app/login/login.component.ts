@@ -89,7 +89,7 @@ export class LoginComponent implements OnInit {
         p.setAttribute('id', 'text_validacao');
         p.textContent = 'Usuário ou senha inválidos tente novamente'
         validacao?.appendChild(p);
-
+        console.log(erro);
       });
     }
 

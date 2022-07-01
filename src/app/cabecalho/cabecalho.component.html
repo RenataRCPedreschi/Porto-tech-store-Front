@@ -5,95 +5,95 @@
 
 
 
-    <a routerLink="" class="logo">
-      <img src="../../assets/img/logo-horizontal.png" alt="Logo PortoTech Store" width="150" height="45">
-    </a>
+      <a routerLink="" class="logo">
+        <img src="../../assets/img/logo-horizontal.png" alt="Logo PortoTech Store" width="150" height="45">
+      </a>
 
-    <form class="busca">
-      <fieldset class="d-flex flex-wrap">
-        <input class="inputText" type="text" placeholder="Pesquise aqui seu produto" [(ngModel)]="buscarNome">
-        <input class="inputButton" type="button" [routerLink]="['/busca/nome/',buscarNome]">
-      </fieldset>
-    </form>
+      <form class="busca">
+        <fieldset class="d-flex flex-wrap">
+          <input class="inputText" type="text" placeholder="Pesquise aqui seu produto" [(ngModel)]="buscarNome">
+          <input class="inputButton" type="button" [routerLink]="['/busca/nome/',buscarNome]">
+        </fieldset>
+      </form>
 
-    <div *ngIf="isAdmin(); else naoadm">
-      <nav>
-        <ul>
-          <li class="userImg flex-wrap adminLi">
-            <a routerLink="gerenciadorprodutos">
-              Gerenciar Produtos
-            </a>
-          </li>
-          <li class="userImg flex-wrap adminLi">
-            <a routerLink="cadastroproduto">
-              Cadastrar Produtos
-            </a>
-          </li>
-          <li class="carrinhoImg">
-            <a (click)="sair()" routerLink="">
-              <img src="../../assets/img/sair.png" alt="sair">
-              Sair
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <ng-template #naoadm>
-
-      <nav >
-        <ul class="listaStyle">
-          <div class="d-flex" *ngIf="isNotLogado(); else logado"> 
-            <li class="userImg flex-wrap">
-              <a routerLink="login">
-                <img src="../../assets/img/userlogin.png" alt="login">
-                Entre/Cadastre-se
+      <div *ngIf="isAdmin(); else naoadm">
+        <nav>
+          <ul>
+            <li class="userImg flex-wrap adminLi">
+              <a routerLink="gerenciadorprodutos">
+                Gerenciar Produtos
               </a>
             </li>
-            
-            <li class="carrinhoImg">
-              <a routerLink="carrinho">
-                <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
-                Meu carrinho
-                <span></span>
+            <li class="userImg flex-wrap adminLi">
+              <a routerLink="cadastroproduto">
+                Cadastrar Produtos
               </a>
             </li>
-          </div>
-
-          <ng-template #logado>
-            <li class="userImg">
-              <a [routerLink]="['/usuario/editar',idUsuario]">
-                <img src="../../assets/img/userlogin.png" alt="login">
-                <small>{{nome}}</small>
-              </a>
-            </li>
-            <li class="userImg">
-              <a routerLink="meuspedidos">
-                <img src="../../assets/img/userlogin.png" alt="login">
-                <small>Meus Pedidos</small>
-              </a>
-            </li>
-
-            <li class="carrinhoImg">
-              <a routerLink="carrinho">
-                <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
-                Meu carrinho
-                <span></span>
-              </a>
-            </li>
-
             <li class="carrinhoImg">
               <a (click)="sair()" routerLink="">
                 <img src="../../assets/img/sair.png" alt="sair">
                 Sair
               </a>
             </li>
-          </ng-template>
-        </ul>
-      </nav>
-    </ng-template>
+          </ul>
+        </nav>
+      </div>
 
-  </div>
+      <ng-template #naoadm>
+
+        <nav>
+          <ul class="listaStyle">
+            <div class="d-flex" *ngIf="isNotLogado(); else logado">
+              <li class="userImg flex-wrap">
+                <a routerLink="login">
+                  <img src="../../assets/img/userlogin.png" alt="login">
+                  Entre/Cadastre-se
+                </a>
+              </li>
+
+              <li class="carrinhoImg">
+                <a routerLink="carrinho">
+                  <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
+                  Meu carrinho
+                  <span></span>
+                </a>
+              </li>
+            </div>
+
+            <ng-template #logado>
+              <li class="userImg">
+                <!-- <a routerLink="minhaconta"> -->
+                <img src="../../assets/img/userlogin.png" alt="login">
+                <small>{{nome}}</small>
+                <!-- </a> -->
+              </li>
+              <li class="userImg">
+                <a routerLink="meuspedidos">
+                  <img src="../../assets/img/userlogin.png" alt="login">
+                  <small>Meus Pedidos</small>
+                </a>
+              </li>
+
+              <li class="carrinhoImg">
+                <a routerLink="carrinho">
+                  <img src="../../assets/img/carrinho-de-compras.png" alt="carrinho de compras">
+                  Meu carrinho
+                  <span></span>
+                </a>
+              </li>
+
+              <li class="carrinhoImg">
+                <a (click)="sair()" routerLink="">
+                  <img src="../../assets/img/sair.png" alt="sair">
+                  Sair
+                </a>
+              </li>
+            </ng-template>
+          </ul>
+        </nav>
+      </ng-template>
+
+    </div>
 
   </div>
 

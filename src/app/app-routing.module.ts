@@ -31,9 +31,9 @@ const routes: Routes = [{
 {path:'busca/categoria/:categoria',component:BuscaCategoriaComponent},
 {path:'busca/nome/:nome', component:BuscaNomeComponent},
 {path:'busca/marca/:marca', component:BuscaMarcaComponent},
-{path:'usuario/editar/:id',component:EditarUsuarioComponent},
 {path:'meuspedidos',component:MeuspedidosComponent},
 {path:'sobre',component:SobreComponent}
+//{path:'minhaconta',component:EditarUsuarioComponent},
 ]
 
 @NgModule({

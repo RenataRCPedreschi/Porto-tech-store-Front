@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { ViaCEPService } from '../services/viacep.service';
 import { UserModel } from '../model/UserModel';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-usuario',
@@ -11,14 +12,16 @@ import { UserModel } from '../model/UserModel';
   styleUrls: ['./editar-usuario.component.css']
 })
 export class EditarUsuarioComponent implements OnInit {
-  idUser:number | undefined;
+  idUser = environment.id;
   usuario: UserModel = new UserModel();
   constructor(private viacepService : ViaCEPService , private auth: AuthService,private router:Router,private acRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.idUser = Number(this.acRoute.snapshot.params['id']);
+    ;
     this.auth.buscarUserById(this.idUser).subscribe(resp=>{
+      console.log("user buscado"+resp);
       this.usuario = resp;
+      console.log("this.usuario "+this.usuario);
     });
   }
   buscarEndereco(cep:any){
@@ -39,7 +42,14 @@ export class EditarUsuarioComponent implements OnInit {
 
   atualizarPessoa(){
     this.auth.atualizar(this.usuario).subscribe(resp=>{
-    
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Atualizado com sucesso!!!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      console.log(resp);
     });
   }
 }

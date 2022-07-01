@@ -6,7 +6,7 @@
     <h1 class="bemVindo">Bem-vindo</h1>
     <h2 class="text-center tech">PortoTech Store: A mais nova loja de produtos tecnológicos</h2>
     <form class="d-flex flex-column align-items-center">
-      <div class= "text-center validacao">
+      <div class="text-center validacao">
       </div>
       <div class="mb-3 form-group w-50">
         <label class="form-label mt-5">Usuário</label>
@@ -14,9 +14,16 @@
           [(ngModel)]="userLogin.username" />
       </div>
       <div class="mb-3 form-group w-50">
+
+
         <label class="form-label mt-2">Senha</label>
         <input placeholder="Digite sua senha" type="password" class="form-control" name="senha"
-          [(ngModel)]="userLogin.password" />
+          [(ngModel)]="userLogin.password" id ="inputSenha" />
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"(click)=verSenha()>
+          <label class="form-check-label" for="flexSwitchCheckDefault">Visualizar senha</label>
+        </div>
+
       </div>
       <button type="submit" class="btn btn mt-3 fs-5" (click)="entrar()">Entrar</button>
     </form>

@@ -53,7 +53,7 @@ export class CadastrarUsuarioComponent implements OnInit {
           text:'Obrigada por comprar na PortoTechStore',
           showConfirmButton: false,
           timer: 1500
-        
+
       });
       this.router.navigate(['/login']);
 
@@ -66,4 +66,13 @@ export class CadastrarUsuarioComponent implements OnInit {
     return environment.token !='';
   }
 
+  verSenha(){
+    const inputSenha = document.querySelector('#inputSenha') as HTMLInputElement;
+    console.log(inputSenha);
+    if(inputSenha.type === "password"){
+      inputSenha.type = "text";
+    }else{
+      inputSenha.type ="password";
+    }
+  }
 }

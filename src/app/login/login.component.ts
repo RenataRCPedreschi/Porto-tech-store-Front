@@ -12,6 +12,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   userLogin: UserLogin = new UserLogin();
+  visible: boolean = true;
   constructor(private auth: AuthService, private router: Router) {
   }
 
@@ -56,7 +57,7 @@ export class LoginComponent implements OnInit {
 
         this.router.navigate(['/inicio']);
       }
-    
+
       console.log(environment);
     });
     if (this.isCamposNotNull()) {
@@ -125,5 +126,15 @@ export class LoginComponent implements OnInit {
       return false;
     }
     return true;
+  }
+
+  verSenha(){
+    const inputSenha = document.querySelector('#inputSenha') as HTMLInputElement;
+    console.log(inputSenha);
+    if(inputSenha.type === "password"){
+      inputSenha.type = "text";
+    }else{
+      inputSenha.type ="password";
+    }
   }
 }

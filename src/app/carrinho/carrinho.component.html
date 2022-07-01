@@ -3,7 +3,6 @@
 <div class="container-fluid paizao mt-5">
 
 
-
   <div class="col-md-8 card ">
 
     <div class="d-flex justify-content-between card-header">
@@ -38,7 +37,8 @@
         </div>
 
         <div class="preco">
-          <p class="text-end">{{"R$ "+itemCarrinho.produto.precoVendaProduto.toFixed(2).replace(".",",")}}</p>
+          <p class="text-end">{{itemCarrinho.produto.precoVendaProduto|currency}}</p>
+          <!-- <p class="text-end">{{"R$ "+itemCarrinho.produto.precoVendaProduto.toFixed(2).replace(".",",")}}</p> -->
         </div>
 
         <div class="quantidade">
@@ -51,7 +51,8 @@
         </div>
 
         <div class="total">
-          <p class="text-end">{{"R$ "+itemCarrinho.subtotal.toFixed(2).replace(".",",")}}</p>
+          <p class="text-end">{{itemCarrinho.subtotal|currency}}</p>
+          <!-- <p class="text-end">{{"R$ "+itemCarrinho.subtotal.toFixed(2).replace(".",",")}}</p> -->
         </div>
 
         <div>
@@ -124,7 +125,8 @@
           <div class="selecionepagto"></div>
           <h5 class="text-center">Total</h5>
           <hr>
-          <h5 class="text-center">{{"R$ "+total.toFixed(2).replace(".",",")}}</h5>
+          <h5 class="text-center">{{total | currency}}</h5>
+          <!-- <h5 class="text-center">{{"R$ "+total.toFixed(2).replace(".",",")}}</h5> -->
         </div>
 
         <div class="d-flex justify-content-center mb-2">
@@ -139,7 +141,8 @@
         <div class="card-body">
           <h5 class="text-center">Total</h5>
           <hr>
-          <h5 class="text-center">R$ {{"R$ "+total.toFixed(2).replace(".",",")}}</h5>
+          <!-- <h5 class="text-center">R$ {{"R$ "+total.toFixed(2).replace(".",",")}}</h5> -->
+          <h5 class="text-center">{{total|currency}}</h5>
         </div>
       </ng-template>
 

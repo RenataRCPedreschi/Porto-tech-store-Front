@@ -22,6 +22,9 @@ import { BuscaCategoriaComponent } from './busca-categoria/busca.component';
 import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
+import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt';
+registerLocaleData(ptBr)
 
 
 
@@ -61,7 +64,9 @@ import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
     
     
   {provide:DEFAULT_CURRENCY_CODE,
-    useValue: 'BRL'}],
+    useValue: 'BRL'},
+    {provide: LOCALE_ID, useValue: 'pt' }
+  ],
 bootstrap: [AppComponent]
 })
 export class AppModule { }

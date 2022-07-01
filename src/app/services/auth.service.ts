@@ -20,6 +20,7 @@ export class AuthService{
     return this.httpClient.get<UserModel>(this.url+"/"+id);
   }
   cadastrar(userModel: UserModel) :Observable<UserModel>{
+    console.log('teste');
     console.log(this.httpClient.post<UserModel>(this.url + '/cadastrar', userModel))
     return this.httpClient.post<UserModel>(this.url + '/cadastrar', userModel);
   }

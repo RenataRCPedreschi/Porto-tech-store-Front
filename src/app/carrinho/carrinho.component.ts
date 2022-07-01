@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { VendaModel } from './../model/VendaModel';
 import { VendaService } from './../services/venda.service';
 import { environment } from './../environments/environment';
@@ -16,7 +17,7 @@ export class CarrinhoComponent implements OnInit {
   public total: number = 0;
   public endereco = environment.endereco;
   public metodoPagamento:string = '';
-  constructor(private vendaService: VendaService) { }
+  constructor(private vendaService: VendaService,private router: Router) { }
 
   ngOnInit(): void {
     this.calcularSubtotal();
@@ -68,9 +69,9 @@ export class CarrinhoComponent implements OnInit {
       p.textContent="Selecione o método de pagamento"
       selecionepagto?.appendChild(p)
       console.log(selecionepagto)
-      return; 
+      return;
     }
-   
+
 
     this.vendaService.ultimoIdCarrinho().subscribe((resp: VendaModel) => {
       if (resp != null) idCarrinho = resp.idCarrinho + 1;
@@ -82,7 +83,9 @@ export class CarrinhoComponent implements OnInit {
         text:'Obrigada por comprar na PortoTechStore',
         showConfirmButton: false,
         timer: 1500
-      })
+      });
+      this.router.navigate(['/meuspedidos']);
+
     });
 
 

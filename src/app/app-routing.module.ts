@@ -16,6 +16,7 @@ import { BuscaMarcaComponent } from './busca-marca/busca-marca.component';
 import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
 import { SobreComponent } from './sobre/sobre.component';
 
+
 const routes: Routes = [{
   path: '', redirectTo: 'inicio', pathMatch: 'full'
 },
@@ -34,6 +35,7 @@ const routes: Routes = [{
 {path:'usuario/editar/:id',component:EditarUsuarioComponent},
 {path:'meuspedidos',component:MeuspedidosComponent},
 {path:'sobre',component:SobreComponent}
+
 ]
 
 @NgModule({

@@ -9,7 +9,7 @@ import { ProdutoModel } from '../model/ProdutoModel';
 })
 
 export class ProdutoService{
-  private url=  'http://localhost:8080/produtos';
+  private url=  'https://portotechstore-backend.herokuapp.com/produtos';
   //private listProduto: ProdutoModel[]
   token = {
     headers: new HttpHeaders().set('Authorization',environment.token)

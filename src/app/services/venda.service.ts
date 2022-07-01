@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
   providedIn: 'root'
 })
 export class VendaService {
-  private url = 'http://localhost:8080/vendasitem'
+  private url = 'https://portotechstore-backend.herokuapp.com/vendasitem'
   token = {
     headers: new HttpHeaders().set('Authorization',environment.token)
   }

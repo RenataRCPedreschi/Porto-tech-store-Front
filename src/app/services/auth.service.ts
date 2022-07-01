@@ -12,7 +12,7 @@ import { environment } from '../environments/environment';
 
 export class AuthService{
 
-  private url = 'http://localhost:8080/usuarios'
+  private url = 'https://portotechstore-backend.herokuapp.com/usuarios'
   constructor(private httpClient : HttpClient){
 
   }

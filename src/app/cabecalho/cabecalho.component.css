@@ -48,13 +48,13 @@ header {
 .inputText {
   appearance: none;
   font: inherit;
-  font-weight: lighter;
   background: none;
   border: none;
   width: 85%;
   height: 2.5rem;
   padding: 0 1rem;
-  opacity: 0.3;
+  opacity: 0.5;
+  color: black;
 }
 
 .inputButton {
@@ -135,13 +135,13 @@ li {
 
 
 @media(max-width: 320px) {
-  
+
   .userImg img {
     width: 24px;
     height: 24px;
 
   }
-  
+
   .carrinhoImg img {
     width: 24px;
     height: 24px;

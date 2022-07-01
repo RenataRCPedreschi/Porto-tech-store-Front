@@ -77,7 +77,7 @@
 
     <div class="card">
       <h4 class="card-header">Resumo</h4>
-      <div *ngIf="!isLogado(); else naologado">
+      <div *ngIf="isLogado(); else naologado">
         <div class="endereco-entrega">
           <h5>Endereço de entrega</h5>
           <p class="mx-2">{{endereco}}</p>

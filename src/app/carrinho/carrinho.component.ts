@@ -70,7 +70,7 @@ export class CarrinhoComponent implements OnInit {
     }
     
       const selecionepagto = document.querySelector(".selecionepagto")
-      const p=document.createElement("p")
+      const p=document.createElement('p')
       p.textContent="Selecione o método de pagamento"
       p.setAttribute("id", "validapagto")
       selecionepagto?.appendChild(p)

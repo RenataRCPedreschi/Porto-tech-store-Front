@@ -1,7 +1,12 @@
-.carousel{
+/* .carousel{
   width: 100%;
   height: 100%;
-}
+  left: 5px;  
+
+} */
+.imagemCarousel{
+width: 100%; 
+} 
 
 
 #carouselExampleIndicators{

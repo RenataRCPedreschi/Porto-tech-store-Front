@@ -114,7 +114,7 @@ export class CarrinhoComponent implements OnInit {
       });
     }
     carrinho.splice(0,carrinho.length);
-    this.router.navigate(['/meuspedidos']);
+    this.router.navigate(['/inicio']);
   }
 
   isLogado(){

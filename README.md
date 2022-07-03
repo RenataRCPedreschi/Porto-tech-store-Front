@@ -1,27 +1,49 @@
-# PortoTechStore
+# 
+## 💻 Sobre
+E-Commerce: Projeto integrador do Grupo 7 sugerido pela Digital House e Porto.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+Nosso site: https://portotechstore.netlify.app
 
-## Development server
+Link para o Back-end: https://github.com/Projeto-Integrador-Grupo-7-E-comerce/PortoTechStore
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🚧 Em desenvolvimento ✔️ 🚧
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🎯 Objetivo
 
-## Build
+```bash
+  
+# Desenvolver um sistema de e-commerce.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##PortoTech Store - A sua loja de artigos eletrônicos.
+teste
 
-## Running unit tests
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠 Tecnologias
 
-## Running end-to-end tests
+Técnologias utilizadas:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### **Back-end**
+<br>
+<div>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="100" height="100"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original-wordmark.svg" alt="Spring" width="100" height="100"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="100" height="100"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/heroku/heroku-original.svg" alt="Heroku" width="100" height="100"/>
+</div>
 
-## Further help
+### **Front-end**
+<br>
+<div>
+<img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" alt="Angular" width="100" height="100"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="Typescript" width="100" height="100"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" alt="HTML" width="100" height="100"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" alt="CSS3" width="100" height="100"/>
+</div>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :mortar_board: Autores
+
+<h4 align="center">
+Feito por <a href="https://www.linkedin.com/in/renata-castrorp/" target="_blank">Renata</a>, <a href="https://www.linkedin.com/in/ssgheitor/">Heitor</a>, <a href="https://www.linkedin.com/in/mariana-roncaratti-84860b180/">Mariana</a>, <a href="" target="_blank">Rafael</a> e <a href="https://www.linkedin.com/in/patriciarogai/">Patricia</a>. 
+</h4>

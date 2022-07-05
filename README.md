@@ -16,7 +16,7 @@ Link para o Back-end: https://github.com/Projeto-Integrador-Grupo-7-E-comerce/Po
 # Desenvolver um sistema de e-commerce.
 
 ##PortoTech Store - A sua loja de artigos eletrônicos.
-teste
+
 
 ```
 

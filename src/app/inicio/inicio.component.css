@@ -7,23 +7,23 @@
 .imagemCarousel{
 width: 100%; 
 margin-top: 20px;
+object-fit: contain;
+
 } 
+
 
 
 #carouselExampleIndicators{
 margin-bottom: 10px;
 
 }
-.imgCarr{
+/* .imgCarr{
 height: 100% !important;
-width: 100% !important;
 
-}
-/* .carousel-inner{
-padding: 10px;
-margin: 10px;
+}  */
 
-} */
+
+
 
 .btn{
     align-items: center;
@@ -84,11 +84,50 @@ margin: 10px;
   margin-bottom: 25px;
   
 }
-
-
-
-
  a{
   text-decoration: none;
   color: #000000;
  }
+
+
+
+.carousel-inner{
+  max-height: 600px;
+  height: 100%;
+
+}
+
+
+ 
+@media(max-width: 1399px) {
+  .carousel-inner{
+    max-height: 550px;
+  }
+  }
+
+  @media(max-width: 1199px) {
+    .carousel-inner{
+      max-height: 450px;
+    }
+    }
+
+    @media(max-width: 991px) {
+      .carousel-inner{
+        max-height: 350px;
+      }
+      }
+      @media(max-width: 767px) {
+        .carousel-inner{
+          max-height: 250px;
+        }
+        }
+        @media(max-width: 507px) {
+          .carousel-inner{
+            max-height: 240px;
+          }
+          }
+          @media(max-width: 425px) {
+            .carousel-inner{
+              max-height: 200px;
+            }
+            }

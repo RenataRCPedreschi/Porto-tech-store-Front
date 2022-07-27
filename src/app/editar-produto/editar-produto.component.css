@@ -1,3 +1,13 @@
 .btn{
    background-color: #103574;
+   color: #f0f8ff;
+}
+
+.cancelar{
+   background-color: #811616;
+  
+}
+
+li{
+   display: inline;
 }

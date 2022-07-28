@@ -12,7 +12,11 @@ h2 {
 
 table {
   width: 100%;
-}
+  border-collapse: separate; 
+  border-spacing: 20px;
+ }
+   
+
 
 .mat-form-field {
   font-size: 14px;
@@ -22,3 +26,10 @@ table {
 .foto{
   width: 15%;;
 }
+
+.container{
+  align-items: center;
+  text-align: center;
+  
+}
+

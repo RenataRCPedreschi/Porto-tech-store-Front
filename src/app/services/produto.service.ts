@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
 import { ProdutoModel } from '../model/ProdutoModel';
-
+import { delay }from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,12 +20,11 @@ export class ProdutoService{
 
 
   buscarProdutos():Observable<ProdutoModel[]>{
-    return this.httpClient.get<ProdutoModel[]>(this.url);
+    return this.httpClient.get<ProdutoModel[]>(this.url).pipe(
+      delay(5000)
+    );
   }
 
-  get(){
-    return this.httpClient.get(this.url);
-  }
   buscarProdutosByCategoria(categoria:string): Observable<ProdutoModel[]>{
     return this.httpClient.get<ProdutoModel[]>(this.url+'/categoria/'+categoria);
   }

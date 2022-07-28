@@ -1,15 +1,15 @@
 /* .carousel{
   width: 100%;
   height: 100%;
-  left: 5px;  
+  left: 5px;
 
 } */
 .imagemCarousel{
-width: 100%; 
+width: 100%;
 margin-top: 20px;
 object-fit: contain;
 
-} 
+}
 
 
 
@@ -36,9 +36,9 @@ height: 100% !important;
     transform: scale(1.1);
     transition: all 0.5s;
     background-color: #1883ad;
-  } 
-  
-  
+  }
+
+
   .imgCard{
    padding: 1.5rem;
 
@@ -73,16 +73,16 @@ height: 100% !important;
     color: rgb(235, 31, 31);
     margin: 10px;
   } */
-/* 
+/*
   #carouselExampleIndicators{
     height: 500px;
     max-height: 100%;
     justify-content: space-between;} */
-  
-  
+
+
 .cardStyle{
   margin-bottom: 25px;
-  
+
 }
  a{
   text-decoration: none;
@@ -96,9 +96,12 @@ height: 100% !important;
   height: 100%;
 
 }
+.spinner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
- 
+}
 @media(max-width: 1399px) {
   .carousel-inner{
     max-height: 550px;

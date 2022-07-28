@@ -27,7 +27,9 @@ export class GerenciarProdutosComponent implements OnInit {
       this.listaProdutos = dataProdutos;
       this.dataSource = new MatTableDataSource(this.listaProdutos);
       this.dataSource.sort = this.sort;
+      this.paginator._intl.itemsPerPageLabel = 'Itens por página'
       this.dataSource.paginator = this.paginator;
+
     });
   }
   ngOnInit() {

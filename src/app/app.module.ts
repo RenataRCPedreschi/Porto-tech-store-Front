@@ -31,7 +31,7 @@ import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreComponent } from './sobre/sobre.component';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 registerLocaleData(ptBr)
 
 
@@ -72,7 +72,8 @@ registerLocaleData(ptBr)
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
 
   providers: [

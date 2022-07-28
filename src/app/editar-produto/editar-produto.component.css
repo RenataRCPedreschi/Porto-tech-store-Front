@@ -18,9 +18,11 @@ padding-bottom: 15px ;
 
 .btn{
    background-color: #103574;
-   color: #f0f8ff;
+      color: #ffffff;
+      margin: 16px;
+      }
 
-}
+
 
 .cancelar{
    background-color: #811616;

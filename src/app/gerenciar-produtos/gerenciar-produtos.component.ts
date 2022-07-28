@@ -23,6 +23,9 @@ export class GerenciarProdutosComponent implements OnInit {
   @ViewChild(MatSort) sort!:MatSort;
 
   constructor(private router: Router, private produtoService: ProdutoService) {
+
+  }
+  ngOnInit() {
     this.produtoService.buscarProdutos().subscribe((dataProdutos)=>{
       this.listaProdutos = dataProdutos;
       this.dataSource = new MatTableDataSource(this.listaProdutos);
@@ -31,8 +34,6 @@ export class GerenciarProdutosComponent implements OnInit {
       this.dataSource.paginator = this.paginator;
 
     });
-  }
-  ngOnInit() {
   }
   chamarPagProduto() {
     this.router.navigate(['/cadastroproduto']);

@@ -1,9 +1,12 @@
 import { ProdutoService } from './../services/produto.service';
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProdutoModel } from '../model/ProdutoModel';
 import { environment } from '../environments/environment';
 import Swal from 'sweetalert2';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-gerenciar-produtos',
@@ -12,14 +15,22 @@ import Swal from 'sweetalert2';
 })
 export class GerenciarProdutosComponent implements OnInit {
 
-  public listaProdutos: ProdutoModel[] = []
-  constructor(private router: Router, private produtoService: ProdutoService) {
+  dataSource!: MatTableDataSource<ProdutoModel>;
+  listaProdutos:any;
+  displayedColumn = ['urlFotoProduto','nomeProduto','precoVendaProduto','qtdeEstoqueProduto','categoriaProduto','marcaProduto','gerProduto']
 
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!:MatSort;
+
+  constructor(private router: Router, private produtoService: ProdutoService) {
+    this.produtoService.buscarProdutos().subscribe((dataProdutos)=>{
+      this.listaProdutos = dataProdutos;
+      this.dataSource = new MatTableDataSource(this.listaProdutos);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
+    });
   }
   ngOnInit() {
-    this.produtoService.buscarProdutos().subscribe((lista: ProdutoModel[]) => {
-      this.listaProdutos = lista;
-    });
   }
   chamarPagProduto() {
     this.router.navigate(['/cadastroproduto']);
@@ -45,6 +56,12 @@ export class GerenciarProdutosComponent implements OnInit {
   isAdmin(){
     return environment.isAdmin == true ;
   }
-
+  pesquisarProduto(e:Event){
+    const filteredValue = (e.target as HTMLInputElement).value;
+    this.dataSource.filter = filteredValue.trim().toLowerCase();
+    if(this.dataSource.paginator){
+      this.dataSource.paginator.firstPage();
+    }
+  }
 
 }

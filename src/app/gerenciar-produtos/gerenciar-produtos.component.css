@@ -1,11 +1,24 @@
-h3{
-    font-style: 18px oblique;
-    padding: 15px;
-    padding-bottom: 15px;
-    }
-    
-    .btn{
-        background-color: #103574;
-        margin: 15px;
-        
-    }
+h2 {
+  font-style: 18px oblique;
+  padding: 15px;
+  padding-bottom: 15px;
+}
+
+.btn {
+  background-color: #103574;
+  margin: 15px;
+
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 80%;
+}
+
+.foto{
+  width: 15%;;
+}

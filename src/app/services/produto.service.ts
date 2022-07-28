@@ -22,6 +22,10 @@ export class ProdutoService{
   buscarProdutos():Observable<ProdutoModel[]>{
     return this.httpClient.get<ProdutoModel[]>(this.url);
   }
+
+  get(){
+    return this.httpClient.get(this.url);
+  }
   buscarProdutosByCategoria(categoria:string): Observable<ProdutoModel[]>{
     return this.httpClient.get<ProdutoModel[]>(this.url+'/categoria/'+categoria);
   }

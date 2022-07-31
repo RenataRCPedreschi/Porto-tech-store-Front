@@ -22,16 +22,16 @@
     </div>
     <div class="mb-3 form-group w-50">
       <label class="form-label">CPF* <small>(Sem pontos)</small></label>
-      <input id = "inputCPF"type="text" class="form-control" name="CPF" [(ngModel)]="newUser.cpf" placeholder="Digite seu CPF" maxlength="11" (blur) = "verificaVazioBlur($event.target)"/>
+      <input id = "inputCPF"type="text" class="form-control" name="CPF" mask="000.000.000-00" [(ngModel)]="newUser.cpf" placeholder="Digite seu CPF" maxlength="14" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
 
     <div class="mb-3 form-group w-50">
       <label class="form-label">Celular*</label>
-      <input id = "inputCelular" type="text" class="form-control" name="celular" [(ngModel)] = "newUser.celular" placeholder="Digite seu celular" (blur) = "verificaVazioBlur($event.target)"/>
+      <input id = "inputCelular" type="text" class="form-control" name="celular" mask="(00)00000-0000" maxlength="14" [(ngModel)] = "newUser.celular" placeholder="Digite seu celular" (blur) = "verificaVazioBlur($event.target)"/>
     </div>
     <div class="mb-3 form-group w-50">
       <label class="form-label">CEP* <small>(Digite para fazer a busca)</small></label>
-      <input id = "inputCEP" type="text" class="form-control" name="cep" #cep (blur)="buscarEndereco(cep)" [(ngModel)]="newUser.cep" placeholder="Digite seu CEP" maxlength="8"(blur) = "verificaVazioBlur($event.target)" />
+      <input id = "inputCEP" type="text" class="form-control" name="cep" mask="00000-000" #cep (blur)="buscarEndereco(cep)" [(ngModel)]="newUser.cep" placeholder="Digite seu CEP" maxlength="9"(blur) = "verificaVazioBlur($event.target)" />
     </div>
 
     <div class="mb-3 form-group w-50">

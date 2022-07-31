@@ -31,13 +31,10 @@ import { MeuspedidosComponent } from './meuspedidos/meuspedidos.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreComponent } from './sobre/sobre.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+//import { NgxMaskModule } from 'ngx-mask'
+
 registerLocaleData(ptBr)
-
-
-
-
-
 
 
 @NgModule({
@@ -60,7 +57,8 @@ registerLocaleData(ptBr)
     BuscaNomeComponent,
     BuscaMarcaComponent,
     EditarUsuarioComponent,
-    MeuspedidosComponent
+    MeuspedidosComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -73,7 +71,8 @@ registerLocaleData(ptBr)
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    //NgxMaskModule.forRoot(/* {dropSpecialCharacters:true} */) 
   ],
 
   providers: [

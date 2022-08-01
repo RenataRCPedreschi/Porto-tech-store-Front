@@ -1,9 +1,8 @@
 <section class="container" *ngIf="isAdmin(); else naoadmin" >
 
-  <img src="../../assets/img/logo-sem-fundo.png" class="rounded mx-auto d-block w-25
-    " alt="...">
+  <img src="../../assets/img/logo-sem-fundo.png" class="logo" alt="...">
   <form class="d-flex flex-column align-items-center" (ngSubmit)="addProdutosBancoDados()">
-    <h1 class="text-center border-personalizada">Cadastrar produto</h1>
+    <p class="text-center border-personalizada cadastro">Cadastrar produto</p>
     <div class="mb-3 form-group w-50">
       <label class="form-label" for="nome">Nome</label>
       <input type="text" class="form-control" name="nome" [(ngModel)] = "produto.nomeProduto"/>

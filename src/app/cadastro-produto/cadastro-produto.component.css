@@ -5,3 +5,19 @@ h1{
     background-color: #103574;
     margin: 2em;
 }
+
+.logo{
+    height:200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+
+    .cadastro{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bolder;
+    }

@@ -43,7 +43,7 @@ export class CadastrarUsuarioComponent implements OnInit {
   cadastrarPessoa() {
     if (this.isCamposNotNull()) {
       this.newUser.isAdmin = false;
-      if(this.newUser.complemento=="null")this.newUser.complemento="";
+      if(this.newUser.complemento=="null" || this.newUser.complemento==null || this.newUser.complemento == undefined)this.newUser.complemento="";
       this.auth.cadastrar(this.newUser).subscribe(resp => {
         console.log("resposta abaixo")
         console.log(resp);

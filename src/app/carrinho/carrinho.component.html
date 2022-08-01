@@ -3,11 +3,11 @@
 <div class="container-fluid paizao mt-5">
 
 
-  <div class="col-md-8 card ">
+  <div class="col-md-8 card cardStyle2">
 
     <div class="d-flex justify-content-between card-header">
       <div class="produto">
-        <h5>Produto</h5>
+        <h3>Produto</h3>
       </div>
       <div class="descricao">
         <h3>Descrição</h3>
@@ -18,18 +18,18 @@
       <div class="quantidade">
         <h3>Quantidade</h3>
       </div>
-      <div
-      class="total">
+      <div class="total">
         <h3>Total</h3>
       </div>
+      <div class="excluir"></div>
     </div>
 
     <div class="d-flex flex-column " *ngIf="carrinhoLocal.length>0">
 
-      <div class="grid-container card cardCarrinho" *ngFor="let itemCarrinho of carrinhoLocal">
+      <div class="grid-container card cardCarrinho " *ngFor="let itemCarrinho of carrinhoLocal">
 
         <div class="foto produto">
-          <img src={{itemCarrinho.produto.urlFotoProduto}} alt="" height="256" width="256">
+          <img src={{itemCarrinho.produto.urlFotoProduto}} alt="produto">
         </div>
 
         <div class="descricao">
@@ -44,8 +44,9 @@
         <div class="quantidade">
           <div>
             <a class="btnQuantidade" (click)="diminuirQtde(itemCarrinho)">-</a>
-            <input type="text" class="border-0 text-center qtdeInput" size="3"[(ngModel)]="itemCarrinho.qtde" min="1"
-              onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" (change)="ngOnInit()" (keyup)="ngOnInit()">
+            <input type="text" class="border-0 text-center qtdeInput" size="3" [(ngModel)]="itemCarrinho.qtde" min="1"
+              onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" (change)="ngOnInit()"
+              (keyup)="ngOnInit()">
             <a class="btnQuantidade" (click)="aumentarQtde(itemCarrinho)">+</a>
           </div>
         </div>
@@ -56,7 +57,8 @@
         </div>
 
         <div>
-          <a class="btnRemover" (click)="removerItemCarrinho(itemCarrinho)"> <img class= "excluir" src="../../assets/img/excluir.png" alt="lixeira"> </a>
+          <a class="btnRemover" (click)="removerItemCarrinho(itemCarrinho)"> <img class="excluir"
+              src="../../assets/img/excluir.png" alt="lixeira"> </a>
         </div>
 
       </div>
@@ -69,82 +71,82 @@
 
   <!-- RESUMO DE COMPRA -->
 
-  <div class="col-md-4">
 
-    <div class="card">
-      <h3 class="card-header">Resumo</h3>
-      <div *ngIf="isLogado(); else naologado">
-        <div class="endereco-entrega">
-          <h5>Endereço de entrega</h5>
-          <p class="mx-2">{{endereco}}</p>
+
+  <div class="card cardStyle1">
+    <h3 class="card-header">Resumo</h3>
+    <div *ngIf="isLogado(); else naologado">
+      <div class="endereco-entrega">
+        <h3>Endereço de entrega</h3>
+        <p class="mx-2">{{endereco}}</p>
+      </div>
+      <div class="forma-pagmento mx-3 mt-1">
+        <h3>Forma de Pagamento</h3>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+            (click)="receberPagamento('Débito')">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Débito
+          </label>
         </div>
-        <div class="forma-pagmento mx-3 mt-1">
-          <h5>Forma de Pagamento</h5>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-              (click)="receberPagamento('Débito')">
-            <label class="form-check-label" for="flexRadioDefault1">
-              Débito
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-              (click)="receberPagamento('Crédito')">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Crédito
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-              (click)="receberPagamento('Pix')">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Pix
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-              (click)="receberPagamento('Boleto')">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Boleto
-            </label>
-          </div>
-
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+            (click)="receberPagamento('Crédito')">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Crédito
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+            (click)="receberPagamento('Pix')">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Pix
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+            (click)="receberPagamento('Boleto')">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Boleto
+          </label>
         </div>
 
-
-
-
-
-        <div class="card-body">
-          <div class="selecionepagto"></div>
-          <h5 class="text-center">Total</h5>
-          <hr>
-          <h5 class="text-center">{{total | currency}}</h5>
-          <!-- <h5 class="text-center">{{"R$ "+total.toFixed(2).replace(".",",")}}</h5> -->
-        </div>
-
-        <div class="d-flex justify-content-center mb-2">
-          <button type="button" class="btn" (click)="finalizarCompra()">Finalizar Compra</button>
-        </div>
       </div>
 
 
-      <ng-template #naologado>
-        <div class="p-4">Faça seu <a routerLink="/login">login</a> ou <a routerLink="/cadastrarusuario">cadastre-se</a>
-          para finalizar a compra</div>
-        <div class="card-body">
-          <h5 class="text-center">Total</h5>
-          <hr>
-          <!-- <h5 class="text-center">R$ {{"R$ "+total.toFixed(2).replace(".",",")}}</h5> -->
-          <h5 class="text-center">{{total|currency}}</h5>
-        </div>
-      </ng-template>
 
 
+
+      <div class="card-body">
+        <div class="selecionepagto"></div>
+        <h3 class="text-center">Total</h3>
+        <hr>
+        <h3 class="text-center">{{total | currency}}</h3>
+        <!-- <h3 class="text-center">{{"R$ "+total.toFixed(2).replace(".",",")}}</h3> -->
+      </div>
+
+      <div class="d-flex justify-content-center mb-2">
+        <button type="button" class="btn" (click)="finalizarCompra()">Finalizar Compra</button>
+      </div>
     </div>
 
+
+    <ng-template #naologado>
+      <div class="p-4">Faça seu <a routerLink="/login">login</a> ou <a routerLink="/cadastrarusuario">cadastre-se</a>
+        para finalizar a compra</div>
+      <div class="card-body">
+        <h3 class="text-center">Total</h3>
+        <hr>
+        <!-- <h3 class="text-center">R$ {{"R$ "+total.toFixed(2).replace(".",",")}}</h3> -->
+        <h3 class="text-center">{{total|currency}}</h3>
+      </div>
+    </ng-template>
+
+
   </div>
+
+
 
 </div>
 

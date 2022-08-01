@@ -3,7 +3,10 @@
   
 }
 
-
+/* p-4{
+  display: flex;
+  justify-content: center;
+} */
 /* .qtdeInput{
   width: ;
 } */
@@ -18,12 +21,16 @@
 
 .paizao{
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  /* flex-wrap: wrap; */
+  padding: 0 !important;
+  justify-content: center;
+  
 }
-.icon-sm {
+/* .icon-sm {
   width: 2rem;
   height: 2rem;
-}
+} */
 
 .btn{
   align-items: center;
@@ -42,13 +49,13 @@
 }
 
 .excluir{
-  width: 32px;
-  height: 32px;
+  width: 27px;
+  height: 27px;
 }
 
-.tm-max {
+/* .tm-max {
   max-height: 150px;
-}
+} */
 
 
 .qtdText{
@@ -63,14 +70,14 @@
 .btnRemover{
   border: none;
   border-radius: 50%;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   cursor: pointer;
   
 }
 .btnRemover img{
   width: 25px;
   height: 25px;
-  margin-top: -20px !important;
+  /* margin-top: -20px !important; */
 }
 .cardCarrinho{
   margin-bottom: 0px;
@@ -78,6 +85,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row !important;
+  /* padding: 0 25px 0 16px !important; */
 }
 
 .divDescricao{
@@ -89,17 +97,38 @@
 }
 
 
+::ng-deep .mat-typography h3{
+  margin: 0 !important;
 
+}
 
 
 .card-header {
   /* width: fit-content !important; */
   background-color: #dbe2f0;
   text-align: center;
-
+  height: 50px;
+  padding: 8px 0 8px 0 !important;
 }
-.card{
-  width: fit-content !important;
+
+.table{
+  /* width: fit-content !important;
+  height: fit-content !important; */
+  max-width: fit-content !important;
+  width:100% !important;
+  height: fit-content !important;
+}
+.cardStyle1{
+  
+  /* min-width: 250px; */
+  max-width: 300px;
+  width:100% !important;
+  height: fit-content !important;
+  
+}
+.cardStyle2{
+  max-width: fit-content !important;
+  width:100% !important;
   height: fit-content !important;
   
 }
@@ -107,6 +136,12 @@
   text-align: center;
 }
 
+.foto img{
+  max-width: 200px;
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+}
 
 
 
@@ -116,31 +151,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  max-width: 200px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
+  
+
 }
 
+.descricao p, .preco p, .total p{
+  margin: 0 !important;
+}
 
 .descricao{
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   width: 180px;
-  margin: 0 auto;
- 
+  height: 100%;
+  /* margin: 0 auto; */
+  
  
 }
 .preco{
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   width: 130px;
-  margin: 0 auto;
+  height: 100%;
+  /* margin: 0 auto; */
   
 }
-.preco p{
+/* .preco p{
   padding-left: 10px;
-}
+} */
 
 
 .quantidade{
@@ -148,18 +192,20 @@
   align-items: center;
   justify-content: center;
   width: 150px;
-  margin: 0 auto;
+  height: 100%;
+  /* margin: 0 auto; */
+  
 }
 .quantidade>div{
   border: 1px solid rgba(150, 148, 148, 0.74);
   border-radius: 10px;
   width: 100px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -20px !important;
+  /* margin-top: -20px !important; */
 }
 .btnQuantidade{
   text-decoration: none;
@@ -171,10 +217,43 @@
   align-items: center;
   justify-content: center;
   width: 150px;
-  margin: 0 auto;
+  height: 100%;
+  /* margin: 0 auto; */
+  
 }
 .selecionepagto{
   color: #ff0000;
   text-align: center;
 }
 
+
+
+
+@media(max-width: 1130px) {
+  .paizao{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+
+  }
+  .cardStyle2{
+    max-width: 837px !important;
+    
+    width: 100% !important;
+    
+  }
+  /* .card-header{
+    min-width: 640px !important;
+  } */
+  .cardStyle1{
+    max-width: 837px;
+    width: 100%;
+  }
+
+  .p-4 {
+    display: flex;
+    align-self: center;
+    gap: 5px;
+  }
+}

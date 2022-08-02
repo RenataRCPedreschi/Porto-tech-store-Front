@@ -46,9 +46,6 @@ export class CadastrarUsuarioComponent implements OnInit {
       if(this.newUser.complemento=="null" || this.newUser.complemento==null || this.newUser.complemento == undefined)this.newUser.complemento="";
 
       this.auth.cadastrar(this.newUser).subscribe(resp => {
-        console.log(this.newUser.complemento=="null" || this.newUser.complemento==null || this.newUser.complemento == undefined);
-        console.log("complemento--->" + this.newUser.complemento);
-
         if (resp == null) {
           Swal.fire({
             icon: 'error',

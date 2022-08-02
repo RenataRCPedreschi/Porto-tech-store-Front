@@ -58,7 +58,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/inicio']);
       }
 
-      console.log(environment);
     });
     if (this.isCamposNotNull()) {
 
@@ -89,7 +88,7 @@ export class LoginComponent implements OnInit {
         p.setAttribute('id', 'text_validacao');
         p.textContent = 'Usuário ou senha inválidos tente novamente'
         validacao?.appendChild(p);
-        console.log(erro);
+
       });
     }
 
@@ -130,7 +129,6 @@ export class LoginComponent implements OnInit {
 
   verSenha(){
     const inputSenha = document.querySelector('#inputSenha') as HTMLInputElement;
-    console.log(inputSenha);
     if(inputSenha.type === "password"){
       inputSenha.type = "text";
     }else{

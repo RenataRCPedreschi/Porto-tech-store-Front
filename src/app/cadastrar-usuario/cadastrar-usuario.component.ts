@@ -65,7 +65,7 @@ export class CadastrarUsuarioComponent implements OnInit {
           this.router.navigate(['/login']);
         }
 
-      }, erro => { console.log("erro:" + erro) });
+      }, erro => { });
     }else{
       Swal.fire({
         icon: 'error',

@@ -44,12 +44,10 @@ export class CadastrarUsuarioComponent implements OnInit {
     if (this.isCamposNotNull()) {
       this.newUser.isAdmin = false;
       if(this.newUser.complemento=="null" || this.newUser.complemento==null || this.newUser.complemento == undefined)this.newUser.complemento="";
-      console.log(this.newUser.complemento=="null" || this.newUser.complemento==null || this.newUser.complemento == undefined);
-      console.log("complemento--->" + this.newUser.complemento);
-      this.auth.cadastrar(this.newUser).subscribe(resp => {
-        console.log("resposta abaixo")
-        console.log(resp);
 
+      this.auth.cadastrar(this.newUser).subscribe(resp => {
+        console.log(this.newUser.complemento=="null" || this.newUser.complemento==null || this.newUser.complemento == undefined);
+        console.log("complemento--->" + this.newUser.complemento);
 
         if (resp == null) {
           Swal.fire({
